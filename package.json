@@ -1,0 +1,24 @@
+{
+  "name": "project_3",
+  "version": "1.0.0",
+  "description": "Project_3",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kicker22/Project_3.git"
+  },
+  "author": "Matt,Mike,David,Tyler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kicker22/Project_3/issues"
+  },
+  "homepage": "https://github.com/Kicker22/Project_3#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1"
+  }
+}
