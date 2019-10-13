@@ -5,26 +5,26 @@ import Carousel from "react-bootstrap/Carousel";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
-import Questions from "../../Images/questions.png";
-import Savings from "../../Images/savings.png";
-import Meetup from "../../Images/meetup.png";
-import Slide1 from "../../Images/slide1.png";
-import Slide2 from "../../Images/slide2.png";
-import Slide3 from "../../Images/slide3.png";
+import Questions from "../Images/questions.png";
+import Savings from "../Images/savings.png";
+import Meetup from "../Images/meetup.png";
+import Slide1 from "../Images/slide1.png";
+import Slide2 from "../Images/slide2.png";
+import Slide3 from "../Images/slide3.png";
 
 export default class index extends Component {
   render() {
     return (
       <div>
-        <Container className="text-center">
+
+        <Container className="text-center mt-4">
           <h1 clasName="flex-center">Mommie Blog</h1>
-          <hr className="bg-dark solid 2px"/>
           <Nav className="justify-content-center" activeKey="/home">
             <Nav.Item>
               <Nav.Link href="/login">Login</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/browes">Browes</Nav.Link>
+              <Nav.Link href="/browes">Browse</Nav.Link>
             </Nav.Item>
           </Nav>
 
