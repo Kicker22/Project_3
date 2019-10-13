@@ -1,51 +1,66 @@
-// import React, { Component } from "react";
-// import Carousel from 'react-bootstrap/Carousel'
-// import Slide1 from  '../../Images/test.png'
+import React, { Component } from "react";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import Carousel from "react-bootstrap/Carousel";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Card from "react-bootstrap/Card";
+import Questions from "../../Images/questions.png";
+import Savings from "../../Images/savings.png";
+import Meetup from "../../Images/meetup.png";
+import Slide1 from "../../Images/slide1.png";
+import Slide2 from "../../Images/slide2.png";
+import Slide3 from "../../Images/slide3.png";
 
-// export default class index extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <Carousel>
-//           <Carousel.Item>
-//             <img
-//               className="d-block w-100"
-//               src={Slide1}
-//               alt="First slide"
-//             />
-//             <Carousel.Caption>
-//               <h3>First slide label</h3>
-//               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-//             </Carousel.Caption>
-//           </Carousel.Item>
-//           <Carousel.Item>
-//             <img
-//               className="d-block w-100"
-//               src={Slide1}
-//               alt="Third slide"
-//             />
+export default class index extends Component {
+  render() {
+    return (
+      <div>
+        <Container className="text-center">
+          <h1 clasName="flex-center">Mommie Blog</h1>
+          <hr className="bg-dark solid 2px"/>
+          <Nav className="justify-content-center" activeKey="/home">
+            <Nav.Item>
+              <Nav.Link href="/login">Login</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="/browes">Browes</Nav.Link>
+            </Nav.Item>
+          </Nav>
 
-//             <Carousel.Caption>
-//               <h3>Second slide label</h3>
-//               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-//             </Carousel.Caption>
-//           </Carousel.Item>
-//           <Carousel.Item>
-//             <img
-//               className="d-block w-100"
-//               src={Slide1}
-//               alt="Third slide"
-//             />
+          <br />
+          <Carousel>
+            <Carousel.Item>
+              <img className="d-block w-100" src={Slide1} alt="First slide" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img className="d-block w-100" src={Slide2} alt="Second slide" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img className="d-block w-100" src={Slide3} alt="Third slide" />
+            </Carousel.Item>
+          </Carousel>
+          <br />
+          <Row>
+            <Col>
+              <Card className="bg-dark text-white 100px100">
+                <Card.Img src={Questions} alt="Card image" />
+              </Card>
+            </Col>
 
-//             <Carousel.Caption>
-//               <h3>Third slide label</h3>
-//               <p>
-//                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-//               </p>
-//             </Carousel.Caption>
-//           </Carousel.Item>
-//         </Carousel>
-//       </div>
-//     );
-//   }
-// }
+            <Col>
+              <Card className="bg-dark text-white 100px100">
+                <Card.Img src={Savings} alt="Card image" />
+              </Card>
+            </Col>
+            <Col>
+              <Card className="bg-dark text-white 100px100">
+                <Card.Img src={Meetup} alt="Card image" />
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    );
+  }
+}

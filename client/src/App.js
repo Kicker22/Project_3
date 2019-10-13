@@ -3,7 +3,7 @@ import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
 // import Home from "./Components/Home";
-import Nav from "./Components/Nav";
+import Home from "./Components/Home";
 // import Card from "./Components/Card";
 // import Container from "react-bootstrap/Container";
 // import Row from "react-bootstrap/Row";
@@ -12,7 +12,7 @@ import Nav from "./Components/Nav";
 function App() {
   return (
     <div className="App">
-      <Nav/>
+      <Home/>
     </div>
   );
 }
