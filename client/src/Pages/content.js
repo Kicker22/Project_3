@@ -14,7 +14,7 @@ export default class content extends Component {
               <Nav.Link href="/browes">Browse</Nav.Link>
             </Nav.Item>
           </Nav>
-          <Jumbotron>
+          <Jumbotron className="content-center mt-4">
             <Row>
               <Card className = "content-card" style={{ width: "18rem" }}>
                 <Card.Body>
