@@ -5,30 +5,32 @@ import Carousel from "react-bootstrap/Carousel";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
+// import CardFooterQB from "../Components/CardFooter/questions";
 import Questions from "../Images/questions.png";
 import Savings from "../Images/savings.png";
 import Meetup from "../Images/meetup.png";
 import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
+import Button from "react-bootstrap/Button";
 
 export default class index extends Component {
   render() {
     return (
       <div>
-
         <Container className="text-center mt-4">
           <h1 clasName="flex-center">Mommie Blog</h1>
           <Nav className="justify-content-center" activeKey="/home">
             <Nav.Item>
-              <Nav.Link href="/login">Login</Nav.Link>
+              <Nav.Link className="text-info" href="/login">Login</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/browes">Browse</Nav.Link>
+              <Nav.Link className="text-info" href="/browes">Browse</Nav.Link>
             </Nav.Item>
           </Nav>
 
           <br />
+
           <Carousel>
             <Carousel.Item>
               <img className="d-block w-100" src={Slide1} alt="First slide" />
@@ -40,22 +42,39 @@ export default class index extends Component {
               <img className="d-block w-100" src={Slide3} alt="Third slide" />
             </Carousel.Item>
           </Carousel>
+
           <br />
+
           <Row>
             <Col>
-              <Card className="bg-dark text-white 100px100">
+              <Card className="bg-transparent 100px100">
                 <Card.Img src={Questions} alt="Card image" />
+                <Card.Footer>
+                  <Button variant="outline-dark" href="/questions">
+                    VIEW
+                  </Button>
+                </Card.Footer>
               </Card>
             </Col>
 
             <Col>
-              <Card className="bg-dark text-white 100px100">
+              <Card className="bg-transparent 100px100">
                 <Card.Img src={Savings} alt="Card image" />
+                <Card.Footer>
+                  <Button variant="outline-dark" href="/savings">
+                    VIEW
+                  </Button>
+                </Card.Footer>
               </Card>
             </Col>
             <Col>
-              <Card className="bg-dark text-white 100px100">
+              <Card className="bg-transparent 100px100">
                 <Card.Img src={Meetup} alt="Card image" />
+                <Card.Footer>
+                  <Button variant="outline-dark" href="/meetup">
+                    VIEW
+                  </Button>
+                </Card.Footer>
               </Card>
             </Col>
           </Row>
