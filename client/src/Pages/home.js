@@ -25,7 +25,7 @@ export default class index extends Component {
               <Nav.Link className="text-info" href="/login">Login</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link className="text-info" href="/browes">Browse</Nav.Link>
+              <Nav.Link className="text-info" href="/content">Browse</Nav.Link>
             </Nav.Item>
           </Nav>
 
