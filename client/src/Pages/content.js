@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import {Nav, Button, Jumbotron, Card, Row,} from 'react-bootstrap';
+import React, { Component } from "react";
+import { Nav, Button, Jumbotron, Card, Row, Container } from "react-bootstrap";
 export default class content extends Component {
-render (){
-    return(
+  render() {
+    return (
       <div>
-        <h1 clasName="flex-center">Mommie Blog</h1>
+        <Container className="text-center mt-4">
+          <h1 clasName="flex-center">Mommie Blog</h1>
           <Nav className="justify-content-center" activeKey="/home">
             <Nav.Item>
               <Nav.Link href="/login">Login</Nav.Link>
@@ -13,96 +14,79 @@ render (){
               <Nav.Link href="/browes">Browse</Nav.Link>
             </Nav.Item>
           </Nav>
-        <Jumbotron>
-        <Row>
-        <Card style={{ width: '18rem' }}>
-  <Card.Body>
-    <Card.Title>Group 1</Card.Title>
-    <Card.Text>
-      Auto filled group cards
-    </Card.Text>
-    <Button variant="primary">Join Group</Button>
-  </Card.Body>
-</Card>
- <Card style={{ width: '18rem' }}>
-  <Card.Body>
-    <Card.Title>Group 2</Card.Title>
-    <Card.Text>
-    Auto filled group cards
-    </Card.Text>
-    <Button variant="primary">Join Group</Button>
-  </Card.Body>
-</Card>
-<Card style={{ width: '18rem' }}>
-  <Card.Body>
-    <Card.Title>Group 3</Card.Title>
-    <Card.Text>
-    Auto filled group cards
-    </Card.Text>
-    <Button variant="primary">Join Group</Button>
-  </Card.Body>
-</Card>
-</Row>
-<Row>
-        <Card style={{ width: '18rem' }}>
-  <Card.Body>
-    <Card.Title>Group 1</Card.Title>
-    <Card.Text>
-      Auto filled group cards
-    </Card.Text>
-    <Button variant="primary">Join Group</Button>
-  </Card.Body>
-</Card>
- <Card style={{ width: '18rem' }}>
-  <Card.Body>
-    <Card.Title>Group 2</Card.Title>
-    <Card.Text>
-    Auto filled group cards
-    </Card.Text>
-    <Button variant="primary">Join Group</Button>
-  </Card.Body>
-</Card>
-<Card style={{ width: '18rem' }}>
-  <Card.Body>
-    <Card.Title>Group 3</Card.Title>
-    <Card.Text>
-    Auto filled group cards
-    </Card.Text>
-    <Button variant="primary">Join Group</Button>
-  </Card.Body>
-</Card>
-</Row>
-<Row>
-        <Card style={{ width: '18rem' }}>
-  <Card.Body>
-    <Card.Title>Group 1</Card.Title>
-    <Card.Text>
-      Auto filled group cards
-    </Card.Text>
-    <Button variant="primary">Join Group</Button>
-  </Card.Body>
-</Card>
- <Card style={{ width: '18rem' }}>
-  <Card.Body>
-    <Card.Title>Group 2</Card.Title>
-    <Card.Text>
-    Auto filled group cards
-    </Card.Text>
-    <Button variant="primary">Join Group</Button>
-  </Card.Body>
-</Card>
-<Card style={{ width: '18rem' }}>
-  <Card.Body>
-    <Card.Title>Group 3</Card.Title>
-    <Card.Text>
-    Auto filled group cards
-    </Card.Text>
-    <Button variant="primary">Join Group</Button>
-  </Card.Body>
-</Card>
-</Row>
-      </Jumbotron>
+          <Jumbotron>
+            <Row>
+              <Card className = "content-card" style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>Group 1</Card.Title>
+                  <Card.Text>Auto filled group cards</Card.Text>
+                  <Button variant="primary">Join Group</Button>
+                </Card.Body>
+              </Card>
+              <Card className = "content-card" style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>Group 2</Card.Title>
+                  <Card.Text>Auto filled group cards</Card.Text>
+                  <Button variant="primary">Join Group</Button>
+                </Card.Body>
+              </Card>
+              <Card className = "content-card" style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>Group 3</Card.Title>
+                  <Card.Text>Auto filled group cards</Card.Text>
+                  <Button variant="primary">Join Group</Button>
+                </Card.Body>
+              </Card>
+            </Row>
+            <Row>
+              <Card className = "content-card" style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>Group 1</Card.Title>
+                  <Card.Text>Auto filled group cards</Card.Text>
+                  <Button variant="primary">Join Group</Button>
+                </Card.Body>
+              </Card>
+              <Card className = "content-card" style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>Group 2</Card.Title>
+                  <Card.Text>Auto filled group cards</Card.Text>
+                  <Button variant="primary">Join Group</Button>
+                </Card.Body>
+              </Card>
+              <Card className = "content-card" style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>Group 3</Card.Title>
+                  <Card.Text>Auto filled group cards</Card.Text>
+                  <Button variant="primary">Join Group</Button>
+                </Card.Body>
+              </Card>
+            </Row>
+            <Row>
+              <Card className = "content-card" style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>Group 1</Card.Title>
+                  <Card.Text>Auto filled group cards</Card.Text>
+                  <Button variant="primary">Join Group</Button>
+                </Card.Body>
+              </Card>
+              <Card className = "content-card" style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>Group 2</Card.Title>
+                  <Card.Text>Auto filled group cards</Card.Text>
+                  <Button variant="primary">Join Group</Button>
+                </Card.Body>
+              </Card>
+              <Card className = "content-card" style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>Group 3</Card.Title>
+                  <Card.Text>Auto filled group cards</Card.Text>
+                  <Button variant="primary">Join Group</Button>
+                </Card.Body>
+              </Card>
+            </Row>
+          </Jumbotron>
+        </Container>
       </div>
-    )
-}
+    );
+  }
 }
