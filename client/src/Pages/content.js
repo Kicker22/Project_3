@@ -11,10 +11,11 @@ export default class content extends Component {
               <Nav.Link href="/login">Login</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/browes">Browse</Nav.Link>
+              <Nav.Link href="/browse">Browse</Nav.Link>
             </Nav.Item>
           </Nav>
           <Jumbotron className="content-center mt-4">
+          <h2 className="flex-center">Find a Blog to checkout!</h2>
             <Row>
               <Card className = "content-card" style={{ width: "18rem" }}>
                 <Card.Body>
