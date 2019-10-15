@@ -37,11 +37,12 @@ mongoose.connect(db, { useNewUrlParser: true })
 
 
 // serving static test files
-app.use(express.static(__dirname + './app/google'));
-require('./app/routes/htmlRoute')(app)
+app.use(express.static(__dirname + './client/public'));
+// require('./app/routes/htmlRoute')(app)
 // end of test files
 
 
 app.listen(port, () => console.log(`server started on http://locahost: ${port}`))
+
 
 

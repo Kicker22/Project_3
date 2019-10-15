@@ -13,16 +13,33 @@ import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
 import Button from "react-bootstrap/Button";
+import  GoogleLogin  from "react-google-login";
+import content from "./content"
+
 
 export default class index extends Component {
+  
   render() {
+    const responseGoogle = (response) => {
+      console.log(response);
+    }
     return (
       <div>
+        
         <Container className="text-center mt-4">
           <h1 clasName="flex-center">Mommie Blog</h1>
           <Nav className="justify-content-center" activeKey="/home">
             <Nav.Item>
-              <Nav.Link className="text-info" href="/login">Login</Nav.Link>
+            <GoogleLogin
+          clientId="611766802619-noklm26o6sth3h5jc58lcm8h88vdv72u.apps.googleusercontent.com"
+          buttonText="Login"
+          onSuccess={responseGoogle}
+          onFailure={responseGoogle}
+          cookiePolicy={"single_host_origin"}
+          redirectUri={"localhost:3000/content"}
+          >
+
+          </GoogleLogin>
             </Nav.Item>
             <Nav.Item>
 
