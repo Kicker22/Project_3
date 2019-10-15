@@ -1,16 +1,19 @@
 import React from "react";
 import './App.css'
 import Home from "./Pages/home";
-// import Blog from "./Pages/blog";
-// import Content from "./Pages/content";
-
+import Content from "./Pages/content";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      {/* <Content /> */}
+    <Router>
+    <div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/content" component={Content} />
+      </Switch>
     </div>
+  </Router>
   );
 }
 
