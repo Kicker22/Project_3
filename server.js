@@ -18,8 +18,8 @@ var db = process.env.MONGODB_URI || "mongodb://localhost/PROJECT-3";
 
 
 // serving static test files
-app.use(express.static(__dirname + './app/google'));
-require('./app/routes/htmlRoute')(app)
+app.use(express.static(__dirname + './client/public'));
+// require('./app/routes/htmlRoute')(app)
 // end of test files
 
 
@@ -30,6 +30,6 @@ mongoose
 .then(() => console.log('Connected to mongoDb...'))
 .catch(err => console.log(err));
 
-app.listen(port, () => console.log(`server started on http://locahost: ${port}`))
+app.listen(port, () => console.log(`server started on http://locahost:${port}`))
 
 

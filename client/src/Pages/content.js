@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Nav, Button, Jumbotron, Card, Row, Container, Carousel } from "react-bootstrap";
+import { Button, Jumbotron, Card, Row, Container, Carousel } from "react-bootstrap";
 import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
@@ -9,14 +9,6 @@ export default class content extends Component {
       <div>
         <Container className="text-center mt-4">
           <h1 clasName="flex-center">Mommie Blog</h1>
-          <Nav className="justify-content-center" activeKey="/home">
-            <Nav.Item>
-              <Nav.Link href="/login">Login</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/browse">Browse</Nav.Link>
-            </Nav.Item>
-          </Nav>
           <br />
 <h2>Featured Blogs</h2>
           <Carousel>
