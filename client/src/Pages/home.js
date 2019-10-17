@@ -31,10 +31,10 @@ export default class index extends Component {
                 className="border-info 2px pr-2"
                 clientId="611766802619-noklm26o6sth3h5jc58lcm8h88vdv72u.apps.googleusercontent.com"
                 buttonText="Login"
-                onSuccess={responseGoogle}
+                onSuccess={(response) => { this.setState({ userLoggedIn: true, }, () => { localStorage.setItem('userLoggedIn', true); console.log(this)});}}
                 onFailure={responseGoogle}
                 cookiePolicy={"single_host_origin"}
-                redirectUri={"localhost:3000/content"}
+                uxMode={"popup"}
               ></GoogleLogin>
             </Nav.Item>
             <Nav.Item>
