@@ -16,7 +16,7 @@ const BlogSchema = new Schema({
         type: String,
         required: true,
     },
-    comments: [{ body: String, date: Date.now }],
+    comments: [{ type: String }],
     date: { type: Date, default: Date.now },
     username: String
 });
