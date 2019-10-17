@@ -14,28 +14,29 @@ import Meetup from "../Images/meetup.png";
 import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
-import GoogleLogin from "react-google-login";
+import { GoogleLogout } from "react-google-login";
 
-export default class index extends Component {
+export default class logedIn extends Component {
   render() {
     const responseGoogle = response => {
       console.log(response);
     };
+    const logout = () => {
+      console.log('logout') // eslint-disable-line
+    }
     return (
       <div>
         <Container className="m-auto text-center">
           <h1 className="text-center pt-2">Mommie Blog</h1>
           <Nav className="justify-content-center my-4" activeKey="/home">
             <Nav.Item>
-              <GoogleLogin
-                className="border-info 2px pr-2"
-                clientId="611766802619-noklm26o6sth3h5jc58lcm8h88vdv72u.apps.googleusercontent.com"
-                buttonText="Login"
-                onSuccess={(response) => { this.setState({ userLoggedIn: true, }, () => { localStorage.setItem('userLoggedIn', true); console.log(this)})}}
-                onFailure={responseGoogle}
-                cookiePolicy={"single_host_origin"}
-                uxMode={"popup"}
-              ></GoogleLogin>
+            <GoogleLogout
+      clientId="611766802619-noklm26o6sth3h5jc58lcm8h88vdv72u.apps.googleusercontent.com"
+      buttonText="Logout"
+      onLogoutSuccess={logout}
+      onFailure={responseGoogle}
+    >
+    </GoogleLogout>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link className="text-info" href="/browse">
