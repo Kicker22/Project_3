@@ -23,7 +23,7 @@ export default function user() {
         <Form.Group controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Post to Blog" />
         </Form.Group>
-        <Button variant="secondary-outline" type="submit" formTarget="/articles">
+        <Button variant="secondary" type="submit" formTarget="/articles">
           Submit
         </Button>
       </Form>
