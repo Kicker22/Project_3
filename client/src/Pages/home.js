@@ -38,7 +38,7 @@ export default class index extends Component {
               ></GoogleLogin>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link className="text-info" href="/browse">
+              <Nav.Link className="text-info" href="/articles">
                 Browse
               </Nav.Link>
             </Nav.Item>
