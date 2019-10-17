@@ -11,7 +11,8 @@ const UserSchema = new Schema({
         type: String,
         required: true,
         unique: true
-    }  
+    }, 
+    blog_ids: String
 });
 
 const User = mongoose.model('users', UserSchema);
