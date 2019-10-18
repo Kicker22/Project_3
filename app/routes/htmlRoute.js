@@ -27,7 +27,11 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../google/testForm.html"));
       
     });
-    app.post("/test", function (req, res) {
+    app.get("/create", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
+      
+    });
+    app.post("/create", function (req, res) {
         const newBlog = new Blog({
             image: req.body.image,
             author: req.body.auth,
@@ -39,7 +43,7 @@ module.exports = function (app) {
         console.log(newBlog)
 
         newBlog.save().then(blog => res.json(blog))
-        res.sendFile(path.join(__dirname, "../google/testForm.html"));
+        res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
       
     });
 

@@ -1,0 +1,28 @@
+
+
+body{
+    background:linear-gradient(0deg,rgba(0, 0, 0, 0.151),rgba(0, 0, 0, 0.568)),url(../images/71467.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbo-content{
+    background: transparent;
+    border: 1px solid white;
+}
+.article-info{
+    color: white;
+    background:rgba(100, 84, 72, 0.829);
+    max-width: 750px;
+    border: 1px solid black;
+}
+
+.submit-button {
+    max-width: 350px;
+}
+
+
+
+
