@@ -16,6 +16,7 @@ body{
     background:rgba(100, 84, 72, 0.829);
     max-width: 750px;
     border: 1px solid black;
+    border-radius: 10px;
 }
 
 .submit-button {
