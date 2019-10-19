@@ -6,47 +6,22 @@ import {
   Card,
   Row,
   Container,
-  Carousel
+  Image
 } from "react-bootstrap";
-import Slide1 from "../Images/slide1.png";
-import Slide2 from "../Images/slide2.png";
-import Slide3 from "../Images/slide3.png";
+import Meetup from "../Images/meetup.png";
+// import Slide2 from "../Images/slide2.png";
+// import Slide3 from "../Images/slide3.png";
 export default class meetups extends Component {
   render() {
     return (
       <div>
         <Container className="text-center mt-4">
-          <h1 clasName="flex-center">Mommie Blog</h1>
           <br />
-          <h2>Featured Blogs</h2>
           <br />
-          <Carousel>
-            <Carousel.Item>
-              <img className="d-block w-100" src={Slide1} alt="First slide" />
-              <Carousel.Caption className="text-light">
-                <h3>Fun At home</h3>
-                <p>Find Something Fun at Home Here!</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img className="d-block w-100" src={Slide2} alt="Second slide" />
-              <Carousel.Caption className="text-dark">
-                <h3>Budgeting</h3>
-                <p>Find ways to save money!</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img className="d-block w-100" src={Slide3} alt="Third slide" />
-              <Carousel.Caption className="text-secondary">
-                <h3>Mommy Meetups</h3>
-                <p>Find your get together mommy group!</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
-
+          <Image src={Meetup} fluid />
           <br />
           <Jumbotron className="content-center mt-4 bg-transparent">
-            <h2 className="flex-center">Find a Blog to checkout!</h2>
+            <h2 className="flex-center">Find, Connect, and Grow</h2>
             <Row>
               <Card className="content-card" style={{ width: "18rem" }}>
                 <Card.Body>
