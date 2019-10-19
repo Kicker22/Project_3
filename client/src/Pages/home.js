@@ -15,34 +15,23 @@ import Meetup from "../Images/meetup.png";
 import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
-import GoogleLogin from "react-google-login";
 import BlogCard from "../Components/Blog/blog";
+import Auth from "../Components/googleAuth/Auth"
 
 export default class index extends Component {
   render() {
-    const responseGoogle = response => {
-      console.log(response);
-    };
+
     return (
       <div>
         <Container className="m-auto text-center">
           <h1 className="text-center pt-2">Mommie Blog</h1>
           <Nav className="justify-content-center my-4" activeKey="/home">
-            <Nav.Item>
-              <GoogleLogin
-                className="border-info 2px pr-2"
-                clientId="611766802619-noklm26o6sth3h5jc58lcm8h88vdv72u.apps.googleusercontent.com"
-                buttonText="Login"
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-                cookiePolicy={"single_host_origin"}
-                redirectUri={"localhost:3000/content"}
-              ></GoogleLogin>
-            </Nav.Item>
+            <Nav.Item></Nav.Item>
             <Nav.Item>
               <Nav.Link className="text-info" href="/articles">
                 Browse
               </Nav.Link>
+                <Auth/>
             </Nav.Item>
           </Nav>
 
@@ -71,7 +60,7 @@ export default class index extends Component {
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
-         
+
           <Row className="py-4 p-auto m-auto">
             <Col>
               <Card className="bg-transparent 100px100">
@@ -102,7 +91,7 @@ export default class index extends Component {
                   </Button>
                 </Card.Footer>
               </Card>
-              </Col>
+            </Col>
           </Row>
         </Container>
 
