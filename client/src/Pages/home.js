@@ -8,6 +8,7 @@ import {
   Carousel,
   Col
 } from "react-bootstrap";
+import Blog from '../Components/Blog/blog'
 import Questions from "../Images/questions.png";
 import Savings from "../Images/savings.png";
 import Meetup from "../Images/meetup.png";
@@ -15,6 +16,7 @@ import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
 import GoogleLogin from "react-google-login";
+import BlogCard from "../Components/Blog/blog";
 
 export default class index extends Component {
   render() {
@@ -81,7 +83,6 @@ export default class index extends Component {
                 </Card.Footer>
               </Card>
             </Col>
-
             <Col>
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Savings} alt="Card image" />
@@ -92,7 +93,6 @@ export default class index extends Component {
                 </Card.Footer>
               </Card>
               </Col>
-
               <Col>
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Meetup} alt="Card image" />
@@ -108,56 +108,39 @@ export default class index extends Component {
 
         <Container className="mb-4">
           <Row className="pt-4 pb-2">
-            <Col>
-              <Card>
-                <Card.Header className="bg-dark text-light">
-                  Featured
-                </Card.Header>
-                <Card.Body>
-                  <Card.Title>User1</Card.Title>
-                  <Card.Text>
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
+          <Col>
+              <BlogCard 
+              Featured={Blog.featured}
+              Title={Blog.title}
+              CardText={Blog.text}
+              />
             </Col>
           </Row>
-
           <Row className="py-2">
             <Col>
-              <Card>
-                <Card.Header className="bg-dark text-light">
-                  Featured
-                </Card.Header>
-                <Card.Body>
-                  <Card.Title>User2</Card.Title>
-                  <Card.Text>
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
+              <BlogCard 
+              Featured={Blog.featured}
+              Title={Blog.title}
+              CardText={Blog.text}
+              />
             </Col>
           </Row>
-
           <Row className="py-2">
             <Col>
-              <Card>
-                <Card.Header className="bg-dark text-light">
-                  Featured
-                </Card.Header>
-                <Card.Body>
-                  <Card.Title>User3</Card.Title>
-                  <Card.Text>
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
+              <BlogCard 
+              Featured={Blog.featured}
+              Title={Blog.title}
+              CardText={Blog.text}
+              />
+            </Col>
+          </Row>
+          <Row className="py-2">
+            <Col>
+              <BlogCard 
+              Featured={Blog.featured}
+              Title={Blog.title}
+              CardText={Blog.text}
+              />
             </Col>
           </Row>
         </Container>
