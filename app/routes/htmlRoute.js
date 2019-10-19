@@ -25,16 +25,17 @@ module.exports = function (app) {
     });
     app.get("/test", function (req, res) {
         res.sendFile(path.join(__dirname, "../google/testForm.html"));
-      
     });
     app.get("/create", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
-      
+    });
+    app.get("/question", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/questionBuilder.html"));
     });
     app.post("/create", function (req, res) {
         const newBlog = new Blog({
             image: req.body.image,
-            author: req.body.auth,
+            author: req.body.author,
             body: req.body.body,
             comments: req.body.comments,
             username: req.body.username
@@ -44,6 +45,18 @@ module.exports = function (app) {
 
         newBlog.save().then(blog => res.json(blog))
         res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
+      
+    });
+
+    app.post("/question", function (req, res) {
+        const newQuestion = new Question({
+            question: req.body.question,
+        })
+
+        console.log(newQuestion)
+
+        newQuestion.save().then(question => res.json(question))
+        res.sendFile(path.join(__dirname, "../public/questionBuilder.html"));
       
     });
 

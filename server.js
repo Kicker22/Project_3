@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const path = require('path')
 const users = require('./app/routes/User');
 const blogs = require('./app/routes/Blog');
+const questions = require("./app/routes/Question");
 const bodyParser = require('body-parser');
 
 // storing express in app var
@@ -19,6 +20,7 @@ app.use(bodyParser.json())
 // routes to users and blog posts
 app.use(users);
 app.use(blogs);
+app.use(questions);
 
 // error handling middleware
 app.use(function(err, req, res, next){
