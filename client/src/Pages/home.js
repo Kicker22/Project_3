@@ -15,10 +15,7 @@ import Meetup from "../Images/meetup.png";
 import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
-<<<<<<< HEAD
-=======
 import BlogCard from "../Components/Blog/blog";
->>>>>>> 78d30dd452f8fc783b93492c2c27c733d07a761d
 import Auth from "../Components/googleAuth/Auth"
 
 export default class index extends Component {
@@ -84,14 +81,8 @@ export default class index extends Component {
                   </Button>
                 </Card.Footer>
               </Card>
-<<<<<<< HEAD
-            </Col>
-
-            <Col>
-=======
               </Col>
               <Col>
->>>>>>> 78d30dd452f8fc783b93492c2c27c733d07a761d
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Meetup} alt="Card image" />
                 <Card.Footer>
