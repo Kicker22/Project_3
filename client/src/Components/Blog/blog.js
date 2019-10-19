@@ -7,8 +7,8 @@ import {
 export default function BlogCard(props) {
   return (
     <div>
-      <Card>
-        <Card.Header className="bg-dark text-light">{props.featured}</Card.Header>
+      <Card className="bg-transparent">
+        <Card.Header className="text-dark">{props.featured}</Card.Header>
         <Card.Body>
           <Card.Title>
             {props.title}
@@ -16,7 +16,7 @@ export default function BlogCard(props) {
           <Card.Text>
             {props.text}
           </Card.Text>
-          <Button variant="primary">Read</Button>
+          <Button variant="outline-dark">Read</Button>
         </Card.Body>
       </Card>
     </div>
