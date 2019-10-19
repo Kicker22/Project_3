@@ -39,7 +39,8 @@ mongoose.connect(db, { useNewUrlParser: true })
 
 
 // serving static test files
-app.use(express.static(__dirname + './client/public'));
+// app.use(express.static(__dirname + './client/public'));
+app.use(express.static(__dirname + '/app/public/'));
 require('./app/routes/htmlRoute')(app)
 // end of test files
 
