@@ -4,6 +4,7 @@ import FacebookLogin from "react-facebook-login";
 
 export default class Facebook extends Component {
   state = {
+    autoLoad:false,
     isLoggedIn: false,
     userID: "",
     name: "",
@@ -19,12 +20,13 @@ export default class Facebook extends Component {
       email: response.email,
       picture: response.picture.data.url
     });
+    
   };
 
   // componentClicked = () => console.log("this has been clicked");
   render() {
     let fbContent;
-
+  
     if (this.state.isLoggedIn) {
       fbContent = (
         <div className='user-img'> 
@@ -41,9 +43,9 @@ export default class Facebook extends Component {
           // cssClass="login"
           // appId="548985249192967"
           appId="590064224865678"
-          autoLoad={false}
+          autoLoad={true}
           fields="name,email,picture"
-          onClick={this.componentClicked}
+          // onClick={loggedIn}
           callback={this.responseFacebook}
           // redirectUri='http://localhost/user'
           // cssClass="small"
