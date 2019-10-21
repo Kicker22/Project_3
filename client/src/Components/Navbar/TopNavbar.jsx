@@ -20,7 +20,7 @@ export class TopNavbar extends Component {
             <a className="mr-4 nav-link" href="" href="/articles">
               Browse
             </a>
-            <a className="mr-4 nav-link" href="">
+            <a className="mr-4 nav-link" href="/meetups">
               Meetup
             </a>
           </NavItem>
