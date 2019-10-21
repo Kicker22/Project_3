@@ -1,0 +1,47 @@
+.bg-target{
+    background: white;
+}
+
+.jumbo-info{
+    margin: 0 auto;
+    width: 50%;
+    background:transparent;
+}
+
+.jumbo-sep{
+ border: 0.5px solid black;
+}
+
+.article-content-body{
+    margin: 0 auto;
+    width: 60%;
+    height: fit-content;
+    /* box-shadow: 0px 0px 10px 0px black; */
+}
+
+.article-body-container{
+    height: fit-content;
+}
+
+.article-body{
+    height: fit-content;
+    line-height: 2;
+}
+
+.footer{
+    background:transparent;
+
+}
+
+.footer-links{
+    color: white;
+}
+
+@media only screen and (max-width: 600px){
+    .article-content-body{
+        margin: 0 auto;
+        width: 100%;
+        height: fit-content;
+        /* box-shadow: 0px 0px 10px 0px black; */
+    }
+}
