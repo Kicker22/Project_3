@@ -1,5 +1,8 @@
 import React, { Component } from "react";
+import "../styleSheets/home.css";
 import {
+  Navbar,
+  NavItem,
   Button,
   Nav,
   Card,
@@ -8,7 +11,7 @@ import {
   Carousel,
   Col
 } from "react-bootstrap";
-import Blog from '../Components/Blog/blog'
+import Blog from "../Components/Blog/blog";
 import Questions from "../Images/questions.png";
 import Savings from "../Images/savings.png";
 import Meetup from "../Images/meetup.png";
@@ -16,22 +19,28 @@ import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
 import BlogCard from "../Components/Blog/blog";
-import Auth from "../Components/googleAuth/Auth"
+import Facebook from "../Components/facebookAuth/Facebook";
 
 export default class index extends Component {
   render() {
-
     return (
       <div>
+        <Navbar className=" home-navbar ">
+          <Facebook />
+          <NavItem className='link-container'>
+            <a className='mr-4 nav-link' href="">Home</a>
+            <a className='mr-4 nav-link' href=""  href="/articles">Browse </a>
+            <a className='mr-4 nav-link' href="">Meetup</a>
+          </NavItem>
+        </Navbar>
+
         <Container className="m-auto text-center">
-          <h1 className="text-center pt-2">Mommie Blog</h1>
           <Nav className="justify-content-center my-4" activeKey="/home">
             <Nav.Item></Nav.Item>
             <Nav.Item>
-              <Nav.Link className="text-info" href="/articles">
+              {/* <Nav.Link className="text-info" href="/articles">
                 Browse
-              </Nav.Link>
-                <Auth/>
+              </Nav.Link> */}
             </Nav.Item>
           </Nav>
 
@@ -81,8 +90,8 @@ export default class index extends Component {
                   </Button>
                 </Card.Footer>
               </Card>
-              </Col>
-              <Col>
+            </Col>
+            <Col>
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Meetup} alt="Card image" />
                 <Card.Footer>
@@ -97,38 +106,38 @@ export default class index extends Component {
 
         <Container className="mb-4">
           <Row className="pt-4 pb-2">
-          <Col>
-              <BlogCard 
-              Featured={Blog.featured}
-              Title={Blog.title}
-              CardText={Blog.text}
+            <Col>
+              <BlogCard
+                Featured={Blog.featured}
+                Title={Blog.title}
+                CardText={Blog.text}
               />
             </Col>
           </Row>
           <Row className="py-2">
             <Col>
-              <BlogCard 
-              Featured={Blog.featured}
-              Title={Blog.title}
-              CardText={Blog.text}
+              <BlogCard
+                Featured={Blog.featured}
+                Title={Blog.title}
+                CardText={Blog.text}
               />
             </Col>
           </Row>
           <Row className="py-2">
             <Col>
-              <BlogCard 
-              Featured={Blog.featured}
-              Title={Blog.title}
-              CardText={Blog.text}
+              <BlogCard
+                Featured={Blog.featured}
+                Title={Blog.title}
+                CardText={Blog.text}
               />
             </Col>
           </Row>
           <Row className="py-2">
             <Col>
-              <BlogCard 
-              Featured={Blog.featured}
-              Title={Blog.title}
-              CardText={Blog.text}
+              <BlogCard
+                Featured={Blog.featured}
+                Title={Blog.title}
+                CardText={Blog.text}
               />
             </Col>
           </Row>
