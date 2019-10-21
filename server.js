@@ -7,6 +7,8 @@ const blogs = require('./app/routes/Blog');
 const questions = require("./app/routes/Question");
 const bodyParser = require('body-parser');
 
+require('dotenv').config()
+
 // storing express in app var
 const app = express()
 
