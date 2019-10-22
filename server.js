@@ -34,7 +34,7 @@ const port = process.env.PORT || 5000;
 
 // DB Config
 // const db = require('./keys').MongoURI;
-// var db = process.env.MONGODB_URI || "mongodb://localhost/PROJECT-3";
+var db = process.env.MONGODB_URI || "mongodb://localhost/PROJECT-3";
 
 // Connect to Mongo
 mongoose
