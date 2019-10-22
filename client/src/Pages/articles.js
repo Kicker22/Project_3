@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Media from "react-bootstrap/Media";
-import { Container } from "react-bootstrap";
-import Nav from "../Components/Header/nav";
+import { Container, Nav } from "react-bootstrap";
 import TopNavbar from "../Components/Navbar/TopNavbar"
 
 export default class articles extends Component {
@@ -11,7 +10,7 @@ export default class articles extends Component {
         <TopNavbar>
           
         </TopNavbar>
-        <Container className="">
+        <Container className="text-center">
           <Media className="mt-4">
             <img
               width={64}
@@ -53,7 +52,11 @@ export default class articles extends Component {
             </Media.Body>
           </Media>
         </Container>
-        <Nav />
+        <Nav.Item className = "text-center">
+            <Nav.Link className="text-info py-4" href="/">
+              Home
+            </Nav.Link>
+          </Nav.Item>
       </div>
     );
   }
