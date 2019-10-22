@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Row, Col, Container } from "react-bootstrap";
+import { Card,  Container } from "react-bootstrap";
 
 function BlogCard(props) {
   return (
