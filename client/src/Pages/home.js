@@ -100,7 +100,7 @@ export default class index extends Component {
           </Row>
         </Container>
 
-        <Container className="mb-4 d-flex">
+        <Container className="mb-4">
               <ArticleCard/>
         </Container>
       </div>

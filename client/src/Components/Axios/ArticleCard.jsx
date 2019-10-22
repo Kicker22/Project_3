@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { Component } from "react";
 import BlogCard from "../Blog/blog.jsx";
+import "../../styleSheets/axios.css"
+
 
 export class ArticleCard extends Component {
   state = {
@@ -21,7 +23,7 @@ export class ArticleCard extends Component {
 
   render() {
     return (
-      <div>
+      <div className='d-flex axiosCard'>
         {this.state.blogs.map(blog => (
           <BlogCard
             key={blog._id}
