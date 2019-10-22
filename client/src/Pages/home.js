@@ -6,7 +6,8 @@ import Meetup from "../Images/meetup.png";
 import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
-import BlogCard from "../Components/Blog/blog";
+// import BlogCard from "../Components/Blog/blog";
+import ArticleCard from '../Components/Axios/ArticleCard'
 import TopNavbar from "../Components/Navbar/TopNavbar";
 import {
   Button,
@@ -99,8 +100,8 @@ export default class index extends Component {
           </Row>
         </Container>
 
-        <Container className="mb-4">
-          
+        <Container className="mb-4 d-flex">
+              <ArticleCard/>
         </Container>
       </div>
     );

@@ -27,6 +27,7 @@ export class ArticleCard extends Component {
             image={blog.image}
             title={blog.title}
             author={blog.author}
+            summary={blog.summary}
             body={blog.body}
             date={blog.date}
           />
