@@ -1,28 +1,25 @@
 import React from "react";
-import { Card,  Container } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
+import "../../styleSheets/card.css";
 
 function BlogCard(props) {
   return (
-    <div>
-      <Container>
-        <Card style={{ maxWidth: "700px" }} className=" mt-3">
-          <div className="row">
-              <img
-                style={{
-                  height: "260px",
-                  width: "260px"
-                }}
-                src={props.image}
-                alt={props.title}
-              />
-            <div className="col-sm-11">
-              <h5>{props.title}</h5>
-            </div>
-            <button>this is a button</button>
-          </div>
-        </Card>
-      </Container>
-    </div>
+    <Card className="articleCard ">
+      <img
+        src={props.image}
+        alt="card image"
+        className="article-card-img"
+      ></img>
+      <div className="article-card-title container">
+        <h5 className='text-center'>{props.title}</h5>
+        <p>Author: {props.author}</p>
+        <div>
+        <button className='mb-3'>Read Article</button>
+        </div>
+
+        {/* <p>{props.summary}</p> */}
+      </div>
+    </Card>
   );
 }
 

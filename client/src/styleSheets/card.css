@@ -1,0 +1,23 @@
+.article-card-container{
+    /* width: 50%; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* flex-direction: row; */
+}
+.articleCard{
+    
+    width: 45%;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.article-card-title{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.article-card-img{
+    width: 200px;
+}
