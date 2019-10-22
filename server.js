@@ -46,9 +46,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.use(express.static("/app/public"));
 }
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
+// app.get('*', (request, response) => {
+// 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+// });
 // serving static test files
 // app.use(express.static(__dirname + './client/public'));
 app.use(express.static(__dirname + "/app/public/"));
