@@ -33,7 +33,7 @@ app.use(function(err, req, res, next){
 const port = process.env.PORT || 5000;
 
 // DB Config
-const db = require('./keys').MongoURI;
+// const db = require('./keys').MongoURI;
 // var db = process.env.MONGODB_URI || "mongodb://localhost/PROJECT-3";
 
 // Connect to Mongo
