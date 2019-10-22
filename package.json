@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "Project_3",
   "main": "server.js",
+  "devDependencies": {},
   "scripts": {
     "client-install":"npm install --prefix client",
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "start":"node server.js",
+    "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "node scripts/seedDB.js"
   },
+  "proxy": "http://localhost:3001",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kicker22/Project_3.git"
