@@ -4,7 +4,7 @@ import "../../styleSheets/card.css";
 
 function BlogCard(props) {
   return (
-    <Card className="articleCard ">
+    <Card key={props._id} className="articleCard ">
       <img
         src={props.image}
         alt="card image"
