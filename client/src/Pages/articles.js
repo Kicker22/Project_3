@@ -2,11 +2,15 @@ import React, { Component } from "react";
 import Media from "react-bootstrap/Media";
 import { Container } from "react-bootstrap";
 import Nav from "../Components/Header/nav";
+import TopNavbar from "../Components/Navbar/TopNavbar"
 
 export default class articles extends Component {
   render() {
     return (
       <div>
+        <TopNavbar>
+          
+        </TopNavbar>
         <Container className="">
           <Media className="mt-4">
             <img

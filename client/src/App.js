@@ -9,13 +9,13 @@ import User from "./Pages/user";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { BlogArticle } from "./Pages/BlogArticle";
 
+
 function App() {
   return (
     <Router>
     <div>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/logedin" component={logedIn} />
         <Route exact path="/meetups" component={Meetups} />
         <Route exact path="/savings" component={Savings} />
         <Route exact path="/questions" component={Questions} />
