@@ -7,7 +7,7 @@ import Questions from "./Pages/questions";
 import Articles from "./Pages/articles";
 import User from "./Pages/user";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import logedIn from "./Pages/logedIn";
+import { BlogArticle } from "./Pages/BlogArticle";
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
         <Route exact path="/questions" component={Questions} />
         <Route exact path="/articles" component={Articles} />
         <Route exact path="/user" component={User} />
+        <Route exact path="/read" component={BlogArticle} />
       </Switch>
     </div>
   </Router>
