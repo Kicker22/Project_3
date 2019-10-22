@@ -42,10 +42,10 @@ mongoose
   .then(() => console.log("MongoDB Connected..."))
   .catch(err => console.log(err));
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-  app.use(express.static("public"));
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+//   app.use(express.static("public"));
+// }
 // serving static test files
 // app.use(express.static(__dirname + './client/public'));
 app.use(express.static(__dirname + "/app/public/"));
