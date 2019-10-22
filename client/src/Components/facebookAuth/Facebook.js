@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
+import { Button, Container } from "react-bootstrap";
 // import { resolve } from "url";
 
 export default class Facebook extends Component {
   state = {
+    autoLoad: false,
     isLoggedIn: false,
     userID: "",
     name: "",
@@ -21,18 +23,30 @@ export default class Facebook extends Component {
     });
   };
 
+  logOut = response => {
+    this.setState({
+      isLoggedIn: false,
+      autoLoad: false,
+      userID: response.userID,
+      name: response.name,
+      email: response.email
+    });
+  };
+
   // componentClicked = () => console.log("this has been clicked");
   render() {
     let fbContent;
 
     if (this.state.isLoggedIn) {
       fbContent = (
-        <div className='user-img'> 
-          <img src={this.state.picture} alt={this.state.name}
-          style={{
-          width:'50px'
-        }}
-        />
+        <div className="user-img">
+          <img
+            src={this.state.picture}
+            alt={this.state.name}
+            style={{
+              width: "50px"
+            }}
+          />
         </div>
       );
     } else {
@@ -41,9 +55,9 @@ export default class Facebook extends Component {
           // cssClass="login"
           // appId="548985249192967"
           appId="590064224865678"
-          autoLoad={false}
+          autoLoad={true}
           fields="name,email,picture"
-          onClick={this.componentClicked}
+          // onClick={this.logOut}
           callback={this.responseFacebook}
           // redirectUri='http://localhost/user'
           // cssClass="small"
@@ -61,6 +75,19 @@ export default class Facebook extends Component {
         />
       );
     }
-    return <div>{fbContent}</div>;
+
+    return (
+      <div>
+        <Container className='login-container d-flex'>
+          {fbContent}
+          <button style={{
+           background:'transparent',
+           boxShadow:'none',
+           border:'none'
+           
+          }} onClick={this.logOut} className=''>logout</button>
+        </Container>
+      </div>
+    );
   }
 }
