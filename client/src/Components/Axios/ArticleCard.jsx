@@ -9,7 +9,7 @@ export class ArticleCard extends Component {
   componentDidMount() {
     axios
       .get(
-        "https://cors-anywhere.herokuapp.com/https://mommie-blog.herokuapp.com/blogs"
+        "https://mommie-blog.herokuapp.com/blogs"
       )
       .then(res => {
         const blogs = res.data;

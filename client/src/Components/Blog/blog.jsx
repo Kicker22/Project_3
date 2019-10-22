@@ -5,9 +5,8 @@ function BlogCard(props) {
   return (
     <div>
       <Container>
-        <Card style={{ maxWidth: "750px" }} className=" mt-3">
+        <Card style={{ maxWidth: "700px" }} className=" mt-3">
           <div className="row">
-            <div className="col-sm-4">
               <img
                 style={{
                   height: "260px",
@@ -16,16 +15,10 @@ function BlogCard(props) {
                 src={props.image}
                 alt={props.title}
               />
+            <div className="col-sm-11">
+              <h5>{props.title}</h5>
             </div>
-            <div className="col-sm-8 mt-4">
-              <h5 className="text-center">{props.title}</h5>
-              <div className="card-body d-flex justify-content-center">
-                <p className="card-text">{props.summary}</p>
-              </div>
-              <div className="btn-div text-center mb-2">
-                <button>this is a button</button>
-              </div>
-            </div>
+            <button>this is a button</button>
           </div>
         </Card>
       </Container>
