@@ -6,11 +6,12 @@ const users = require('./app/routes/User');
 const blogs = require('./app/routes/Blog');
 const questions = require("./app/routes/Question");
 const bodyParser = require('body-parser');
+const cors_proxy = require('cors-anywhere');
 
-require('dotenv').config()
+require('dotenv').config();
 
 // storing express in app var
-const app = express()
+const app = express();
 
 // middleware
 app.use(express.json());
@@ -30,7 +31,17 @@ app.use(function(err, req, res, next){
 })
 
 // connection port
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
+// cors_proxy.createServer({
+//     originWhitelist: [`origin: process.env.ORIGIN_URL || "http://localhost",
+//     optionsSuccessStatus: 200`], // Allow all origins
+//     requireHeader: ['origin', 'x-requested-with'],
+//     removeHeaders: ['cookie', 'cookie2'],
+//     AccessControlAllowOrigin: ['*']
+// });
+// .listen(PORT, 'http://localhost', function() {
+//     console.log('Running CORS Anywhere on ' + 'http://localhost + ':' + port);
+// });
 
 // DB Config
 const db = require('./keys').MongoURI;
@@ -47,9 +58,11 @@ mongoose.connect(db, { useNewUrlParser: true })
 app.use(express.static(__dirname + '/app/public/'));
 require('./app/routes/htmlRoute')(app)
 // end of test files
+// app.use("/cors/*", function(req, res) {
+//     req.pipe(request(req.params[0])).pipe(res);
+//   });
 
-
-app.listen(port, () => console.log(`server started on http://locahost: ${port}`))
+app.listen(PORT, () => console.log(`CORS-enabled web server started on http://locahost: ${PORT}`))
 
 
 

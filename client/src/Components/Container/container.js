@@ -1,9 +1,8 @@
-import React from 'react'
-import Container from "react-bootstrap"
+import React from 'react';
 
-export default function Container(props) {
+export default function Wrapper(props) {
     return (
-        <div className="container">
+        <div className="Container">
           {props.children}  
         </div>
     )

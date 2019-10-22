@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "../styleSheets/home.css";
 import {
-  Navbar,
-  NavItem,
   Button,
   Nav,
   Card,
