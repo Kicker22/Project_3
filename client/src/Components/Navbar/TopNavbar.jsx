@@ -11,13 +11,13 @@ export class TopNavbar extends Component {
   render() {
     return (
       <div>
-        <Navbar className=" home-navbar ">
+        <Navbar className="home-navbar">
           <Facebook />
           <NavItem className="link-container">
             <a className="mr-4 nav-link" href="/">
               Home
             </a>
-            <a className="mr-4 nav-link" href="" href="/articles">
+            <a className="mr-4 nav-link" href="/articles">
               Browse
             </a>
             <a className="mr-4 nav-link" href="/meetups">
