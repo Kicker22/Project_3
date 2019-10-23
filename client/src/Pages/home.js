@@ -19,20 +19,15 @@ import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
 import BlogCard from "../Components/Blog/blog";
-import Facebook from "../Components/facebookAuth/Facebook";
+import TopNavbar from "../Components/Navbar/TopNavbar"
 
 export default class index extends Component {
   render() {
     return (
       <div>
-        <Navbar className=" home-navbar ">
-          <Facebook />
-          <NavItem className='link-container'>
-            <a className='mr-4 nav-link' href="">Home</a>
-            <a className='mr-4 nav-link' href=""  href="/articles">Browse </a>
-            <a className='mr-4 nav-link' href="">Meetup</a>
-          </NavItem>
-        </Navbar>
+        <TopNavbar>
+      
+        </TopNavbar>
 
         <Container className="m-auto text-center">
           <Nav className="justify-content-center my-4" activeKey="/home">
