@@ -22,6 +22,7 @@ export default class index extends Component {
   render() {
     const responseGoogle = (response) => {
       console.log(response);
+      
     }
     return (
       <div>
@@ -36,7 +37,8 @@ export default class index extends Component {
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
           cookiePolicy={"single_host_origin"}
-          redirectUri={"localhost:3000/content"}
+          ux_mode = {"redirect"}
+          redirectUri={"http://localhost:3000/browse"}
           >
 
           </GoogleLogin>
