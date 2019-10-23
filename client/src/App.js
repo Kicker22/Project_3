@@ -7,7 +7,7 @@ import Questions from "./Pages/questions";
 import Articles from "./Pages/articles";
 import User from "./Pages/user";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { BlogArticle } from "./Pages/BlogArticle";
+import  BlogArticle  from "./Pages/BlogArticle";
 import Axios, { ArticleCard } from "./Components/Axios/ArticleCard";
 
 function App() {
