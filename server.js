@@ -70,6 +70,6 @@ require("./app/routes/htmlRoute")(app);
 //     req.pipe(request(req.params[0])).pipe(res);
 //   });
 
-app.listen(port, () =>
-  console.log(`server started on http://locahost: ${port}`)
+app.listen(PORT, () =>
+  console.log(`server started on http://locahost: ${PORT}`)
 );
