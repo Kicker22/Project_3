@@ -45,4 +45,4 @@ export class BlogArticle extends Component {
   }
 }
 
-// export default BlogArticle
+export default BlogArticle
