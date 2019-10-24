@@ -36,6 +36,7 @@ module.exports = function (app) {
         const newBlog = new Blog({
             image: req.body.image,
             author: req.body.author,
+            summary:req.body.summary,
             body: req.body.body,
             comments: req.body.comments,
             username: req.body.username
