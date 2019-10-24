@@ -8,7 +8,6 @@ function SearchResults (props) {
       <h3>Number of Groups: {props.group_count}</h3>
       <h3>Total Members: {props.member_count}</h3>
       <p>Description: {props.description}</p>
-      <button href = "https://www.meetup.com/find/?allMeetups=false&keywords=moms=25&userFreeform=Salt+Lake+City%2C+UT&mcId=z84101&mcName=Salt+Lake+City%2C+UT&sort=default"></button>
     </div>
   );
 }
