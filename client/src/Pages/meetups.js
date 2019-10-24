@@ -43,6 +43,8 @@ export default class meetups extends Component {
 
   render() {
     return (
+      <div>
+        <TopNavbar/>
       <Container className="text-center mt-4">
         <br />
         <br />
@@ -86,6 +88,7 @@ export default class meetups extends Component {
           </Nav.Link>
         </Nav.Item>
       </Container>
+      </div>
     );
   }
 }
