@@ -102,7 +102,7 @@ export default class index extends Component {
 
         <Container className="mb-4">
         <Link to="/create">
-        <button href="#" type="submit" id="testButton" class="btn btn-primary btn-lg btn-block mx-auto my-4">Create Blog Post</button>
+        <button href="#" type="submit" id="testButton" className="btn btn-primary btn-lg btn-block mx-auto my-4">Create Blog Post</button>
         </Link>
               <ArticleCard/>
         </Container>

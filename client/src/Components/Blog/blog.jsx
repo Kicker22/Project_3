@@ -11,12 +11,8 @@ function BlogCard(props) {
         className="article-card-img"
       ></img>
       <div className="article-card-title container">
-        <h5 className='text-center'>{props.title}</h5>
+        <h5 className="text-center">{props.title}</h5>
         <p>Author: {props.author}</p>
-        <div>
-        <button className='mb-3'>Read Article</button>
-        </div>
-
         {/* <p>{props.summary}</p> */}
       </div>
     </Card>
