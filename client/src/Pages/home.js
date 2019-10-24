@@ -23,7 +23,6 @@ import {
 export default class index extends Component {
 
   state={
-
   }
 
   render() {
