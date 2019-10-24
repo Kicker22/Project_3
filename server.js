@@ -5,7 +5,7 @@ const path = require("path");
 const users = require("./app/routes/User");
 const blogs = require("./app/routes/Blog");
 const questions = require("./app/routes/Question");
-
+const apiRoutes = require("./routes/apiRoutes");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 
@@ -25,6 +25,7 @@ app.use(bodyParser.json());
 app.use(users);
 app.use(blogs);
 app.use(questions);
+app.use("/api", apiRoutes);
 
 // error handling middleware
 app.use(function(err, req, res, next) {
@@ -33,16 +34,6 @@ app.use(function(err, req, res, next) {
 
 // connection port
 const PORT = process.env.PORT || 5000;
-// cors_proxy.createServer({
-//     originWhitelist: [`origin: process.env.ORIGIN_URL || "http://localhost",
-//     optionsSuccessStatus: 200`], // Allow all origins
-//     requireHeader: ['origin', 'x-requested-with'],
-//     removeHeaders: ['cookie', 'cookie2'],
-//     AccessControlAllowOrigin: ['*']
-// });
-// .listen(PORT, 'http://localhost', function() {
-//     console.log('Running CORS Anywhere on ' + 'http://localhost + ':' + port);
-// });
 
 // DB Config
 // const db = require('./keys').MongoURI;
