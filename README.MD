@@ -1,5 +1,7 @@
 # WELCOME TO THE PROJECT 3 REAMDME
 
+URL: https://mommie-blog.herokuapp.com
+
 Project Goals
 
 #Overview of Project:
