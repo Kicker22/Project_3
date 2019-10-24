@@ -13,7 +13,6 @@ import Meetup from "../Images/meetup.png";
 // import Slide3 from "../Images/slide3.png";
 import TopNavbar from "../Components/Navbar/TopNavbar";
 export default class meetups extends Component {
-<<<<<<< HEAD
   state = {
     result: [],
     search: ""
@@ -89,37 +88,6 @@ export default class meetups extends Component {
           </Nav.Link>
         </Nav.Item>
       </Container>
-=======
-  
-  render() {
-    return (
-      <div>
-        <TopNavbar>
-          
-        </TopNavbar>
-        <Container className="text-center mt-4">
-          <br />
-          <br />
-          <Image src={Meetup} fluid />
-          <br />
-          <Jumbotron className="content-center mt-4 bg-transparent">
-            <h2 className="flex-center">Find, Connect, and Grow</h2>
-            <Row>
-                <Card.Body>
-                  <Topics
-                  />
-                </Card.Body>
-            
-            </Row>
-          </Jumbotron>
-          <Nav.Item>
-            <Nav.Link className="text-info py-4" href="/">
-              Home
-            </Nav.Link>
-          </Nav.Item>
-        </Container>
-      </div>
->>>>>>> 9041a1faad366362eb2fd6596d73906a16b815a5
     );
   }
 }
