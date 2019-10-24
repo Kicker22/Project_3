@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import "../styleSheets/home.css";
 import Questions from "../Images/questions.png";
 import Savings from "../Images/savings.png";
@@ -101,6 +102,9 @@ export default class index extends Component {
         </Container>
 
         <Container className="mb-4">
+        <Link to="/create">
+        <button href="#" type="submit" id="testButton" class="btn btn-primary btn-lg btn-block mx-auto my-4">Create Blog Post</button>
+        </Link>
               <ArticleCard/>
         </Container>
       </div>
