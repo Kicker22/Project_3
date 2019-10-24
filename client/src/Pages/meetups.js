@@ -5,10 +5,7 @@ import SearchResults from "../Components/SearchResults/SearchResults";
 import SearchForm from "../Components/SearchForm/SearchForm";
 import API from "../Utils/API";
 import Meetup from "../Images/meetup.png";
-
-// import Slide2 from "../Images/slide2.png";
-// import Slide3 from "../Images/slide3.png";
-import TopNavbar from "../Components/Navbar/TopNavbar";
+import TopNavbar from "../Components/Navbar/TopNavbar"
 
 export default class meetups extends Component {
   state = {
@@ -43,7 +40,9 @@ export default class meetups extends Component {
 
   render() {
     return (
+      
       <Container className="text-center mt-4">
+        <TopNavbar></TopNavbar>
         <br />
         <br />
         <Image src={Meetup} fluid />

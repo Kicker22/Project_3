@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
-import { Button, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 // import { resolve } from "url";
 
 export default class Facebook extends Component {
@@ -84,8 +84,8 @@ export default class Facebook extends Component {
            background:'transparent',
            boxShadow:'none',
            border:'none'
-           
-          }} onClick={this.logOut} className=''>logout</button>
+  
+          }} onClick={this.logOut} className=''>Logout</button>
         </Container>
       </div>
     );

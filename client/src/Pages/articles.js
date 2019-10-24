@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Media from "react-bootstrap/Media";
 import { Container, Nav, Row } from "react-bootstrap";
 import TopNavbar from "../Components/Navbar/TopNavbar";
-import ArticleCard from "../Components/Axios/ArticleCard";
+
 export default class articles extends Component {
   render() {
     return (
