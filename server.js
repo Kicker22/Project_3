@@ -5,7 +5,7 @@ const path = require("path");
 const users = require("./app/routes/User");
 const blogs = require("./app/routes/Blog");
 const questions = require("./app/routes/Question");
-const apiRoutes = require("./routes/apiRoutes");
+const apiRoutes = require("../Project_3/app/routes/apiRoutes");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 

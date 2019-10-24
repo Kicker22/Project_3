@@ -102,7 +102,7 @@ export default class index extends Component {
 
         <Container className="mb-4">
           <h1 className="text-center">Recent Articles</h1>
-              <ArticleCard/>
+              <ArticleCard></ArticleCard>
         </Container>
       </div>
     );
