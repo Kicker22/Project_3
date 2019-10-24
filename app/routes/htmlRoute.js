@@ -1,6 +1,6 @@
 const path = require("path")
 const express = require("express")
-
+const router = express.Router();
 const Blog = require("./Blog")
 
 // THESE ARE TEST ROUTES USED TO SET UP GOOGLE OAUTH
@@ -11,7 +11,7 @@ const Blog = require("./Blog")
 // THESE ARE TEST ROUTES USED TO SET UP GOOGLE OAUTH
 
 
-module.exports = function (app) {
+
     // app.get("/login", function (req, res) {
     //     res.sendFile(path.join(__dirname, "googleTest"));   
     // });
@@ -61,4 +61,4 @@ module.exports = function (app) {
       
     });
 
-}
+module.exports = router;

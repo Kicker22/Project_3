@@ -1,20 +1,42 @@
-// import React, { Component } from "react";
-// import { Nav, Jumbotron, Row, Container, Image, Col } from "react-bootstrap";
-// import Card from "../Components/Card/card";
-// import SearchResults from "../Components/SearchResults/SearchResults";
-// import SearchForm from "../Components/SearchForm/SearchForm";
-// import API from "../Utils/API";
-// import Meetup from "../Images/meetup.png";
+// <<<<<<< mattHome
+// // import React, { Component } from "react";
+// // import { Nav, Jumbotron, Row, Container, Image, Col } from "react-bootstrap";
+// // import Card from "../Components/Card/card";
+// // import SearchResults from "../Components/SearchResults/SearchResults";
+// // import SearchForm from "../Components/SearchForm/SearchForm";
+// // import API from "../Utils/API";
+// // import Meetup from "../Images/meetup.png";
 
-// // import Slide2 from "../Images/slide2.png";
-// // import Slide3 from "../Images/slide3.png";
-// import TopNavbar from "../Components/Navbar/TopNavbar";
+// // // import Slide2 from "../Images/slide2.png";
+// // // import Slide3 from "../Images/slide3.png";
+// // import TopNavbar from "../Components/Navbar/TopNavbar";
 
-// export default class meetups extends Component {
-//   state = {
-//     result: [],
-//     search: ""
-//   };
+// // export default class meetups extends Component {
+// //   state = {
+// //     result: [],
+// //     search: ""
+// //   };
+// =======
+// // import React, { Component } from "react";
+// // import {
+// //   Nav,
+// //   Jumbotron,
+// //   Card,
+// //   Row,
+// //   Container,
+// //   Image
+// // } from "react-bootstrap";
+// // import Topics from "../Components/Topics/Topics"
+// // import Meetup from "../Images/meetup.png";
+// // // import Slide2 from "../Images/slide2.png";
+// // // import Slide3 from "../Images/slide3.png";
+// // import TopNavbar from "../Components/Navbar/TopNavbar";
+// // export default class meetups extends Component {
+// //   state = {
+// //     result: [],
+// //     search: ""
+// //   };
+// >>>>>>> master
 
 //   // When this component mounts, search for the movie "The Matrix"
 //   componentDidMount() {
