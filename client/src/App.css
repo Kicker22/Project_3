@@ -1,3 +1,9 @@
 body {
-    background-image: url("./Images/boards.png");
+    /* background-image: url("./Images/boards.png"); */
+    background:linear-gradient(0deg,rgba(255, 255, 255, 0.123),rgba(255, 255, 255, 0.171)),url(./Images/boards.png);
+
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-position: top; */
+    background-repeat: no-repeat;
 }

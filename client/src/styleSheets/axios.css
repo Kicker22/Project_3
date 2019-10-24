@@ -1,0 +1,6 @@
+.axiosCard{
+    height: fit-content;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
