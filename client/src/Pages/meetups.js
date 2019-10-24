@@ -1,16 +1,19 @@
 import React, { Component } from "react";
-import { Nav, Jumbotron, Row, Container, Image, Col } from "react-bootstrap";
-import Card from "../Components/Card/card";
-import SearchResults from "../Components/SearchResults/SearchResults";
-import SearchForm from "../Components/SearchForm/SearchForm";
-import API from "../Utils/API";
+import {
+  Nav,
+  Jumbotron,
+  Card,
+  Row,
+  Container,
+  Image
+} from "react-bootstrap";
+import Topics from "../Components/Topics/Topics"
 import Meetup from "../Images/meetup.png";
-
 // import Slide2 from "../Images/slide2.png";
 // import Slide3 from "../Images/slide3.png";
 import TopNavbar from "../Components/Navbar/TopNavbar";
-
 export default class meetups extends Component {
+<<<<<<< HEAD
   state = {
     result: [],
     search: ""
@@ -86,6 +89,37 @@ export default class meetups extends Component {
           </Nav.Link>
         </Nav.Item>
       </Container>
+=======
+  
+  render() {
+    return (
+      <div>
+        <TopNavbar>
+          
+        </TopNavbar>
+        <Container className="text-center mt-4">
+          <br />
+          <br />
+          <Image src={Meetup} fluid />
+          <br />
+          <Jumbotron className="content-center mt-4 bg-transparent">
+            <h2 className="flex-center">Find, Connect, and Grow</h2>
+            <Row>
+                <Card.Body>
+                  <Topics
+                  />
+                </Card.Body>
+            
+            </Row>
+          </Jumbotron>
+          <Nav.Item>
+            <Nav.Link className="text-info py-4" href="/">
+              Home
+            </Nav.Link>
+          </Nav.Item>
+        </Container>
+      </div>
+>>>>>>> 9041a1faad366362eb2fd6596d73906a16b815a5
     );
   }
 }
