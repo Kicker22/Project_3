@@ -1,41 +1,87 @@
 import React, { Component } from "react";
-import {
-  Nav,
-  Jumbotron,
-  Card,
-  Row,
-  Container,
-  Image
-} from "react-bootstrap";
-import Topics from "../Components/Topics/Topics"
+import { Nav, Jumbotron, Row, Container, Image, Col } from "react-bootstrap";
+import Card from "../Components/Card/card";
+import SearchResults from "../Components/SearchResults/SearchResults";
+import SearchForm from "../Components/SearchForm/SearchForm";
+import API from "../Utils/API";
 import Meetup from "../Images/meetup.png";
+
 export default class meetups extends Component {
-  
+  state = {
+    result: {},
+    search: ""
+  };
+
+  // When this component mounts, search for the movie "The Matrix"
+  componentDidMount() {
+    this.SearchResults("");
+  }
+
+  SearchResults = query => {
+    API.search(query)
+      .then(res => this.setState({ result: res.data }))
+      .catch(err => console.log(err));
+  };
+
+  handleInputChange = event => {
+    const value = event.target.value;
+    const name = event.target.name;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  // When the form is submitted, search the MeetUpsSearch API for the value of `this.state.search`
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.SearchResults(this.state.search);
+  };
+
   render() {
     return (
-      <div>
-        <Container className="text-center mt-4">
-          <br />
-          <br />
-          <Image src={Meetup} fluid />
-          <br />
-          <Jumbotron className="content-center mt-4 bg-transparent">
-            <h2 className="flex-center">Find, Connect, and Grow</h2>
-            <Row>
-                <Card.Body>
-                  <Topics
+      <Container className="text-center mt-4">
+        <br />
+        <br />
+        <Image src={Meetup} fluid />
+        <br />
+        <Jumbotron className="content-center mt-4 bg-transparent">
+          <h2 className="flex-center">Find, Connect, and Grow</h2>
+          <Row>
+            <Col size="md-8">
+              <Card
+                heading={this.state.result.id || "Search for a Topic to Join"}
+              >
+                {this.state.result.data? (
+                  <SearchResults 
+                    id={this.state.result.id}
+                    name={this.state.result.name}
+                    urlkey={this.state.result.urlkey}
+                    group_count={this.state.result.group_count}
+                    description={this.state.result.description}
+                    lang={this.state.result.lang}
                   />
-                </Card.Body>
-            
-            </Row>
-          </Jumbotron>
-          <Nav.Item>
-            <Nav.Link className="text-info py-4" href="/">
-              Home
-            </Nav.Link>
-          </Nav.Item>
-        </Container>
-      </div>
+                ) : (
+                  <h3>No Results to Display</h3>
+                )}
+              </Card>
+            </Col>
+            <Col size="md-4">
+              <Card heading="Search">
+                <SearchForm
+                  value={this.state.search}
+                  handleInputChange={this.handleInputChange}
+                  handleFormSubmit={this.handleFormSubmit}
+                />
+              </Card>
+            </Col>
+          </Row>
+        </Jumbotron>
+        <Nav.Item>
+          <Nav.Link className="text-info py-4" href="/">
+            Home
+          </Nav.Link>
+        </Nav.Item>
+      </Container>
     );
   }
 }
