@@ -9,7 +9,7 @@ import TopNavbar from "../Components/Navbar/TopNavbar"
 
 export default class meetups extends Component {
   state = {
-    result: {},
+    result: [],
     search: ""
   };
 
@@ -54,16 +54,16 @@ export default class meetups extends Component {
               <Card
                 heading={this.state.result.id || "Search for a Topic to Join"}
               >
-                {this.state.result.data? (
+                {this.state.result.map( result => (
                   <SearchResults 
-                    id={this.state.result.id}
-                    name={this.state.result.name}
-                    urlkey={this.state.result.urlkey}
-                    group_count={this.state.result.group_count}
-                    description={this.state.result.description}
-                    lang={this.state.result.lang}
+                    id={result.id}
+                    name={result.name}
+                    urlkey={result.urlkey}
+                    group_count={result.group_count}
+                    description={result.description}
+                    lang={result.lang}
                   />
-                ) : (
+                ))} {this.state.result.length === 0 && (
                   <h3>No Results to Display</h3>
                 )}
               </Card>
