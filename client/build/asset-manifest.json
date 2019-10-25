@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.21832b02.chunk.css",
+    "main.js": "/static/js/main.7daf127d.chunk.js",
+    "main.js.map": "/static/js/main.7daf127d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b3f7267f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b3f7267f.js.map",
+    "static/css/2.0624914a.chunk.css": "/static/css/2.0624914a.chunk.css",
+    "static/js/2.6996d967.chunk.js": "/static/js/2.6996d967.chunk.js",
+    "static/js/2.6996d967.chunk.js.map": "/static/js/2.6996d967.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b06f1d9d1c5589c39561ea0d55282a7f.js": "/precache-manifest.b06f1d9d1c5589c39561ea0d55282a7f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.21832b02.chunk.css.map": "/static/css/main.21832b02.chunk.css.map",
+    "static/media/App.css": "/static/media/boards.59d200de.png",
+    "static/media/meetup.png": "/static/media/meetup.544f2557.png",
+    "static/media/questions.png": "/static/media/questions.1be652ef.png",
+    "static/media/savings.png": "/static/media/savings.798e4583.png",
+    "static/media/slide1.png": "/static/media/slide1.d09534cd.png",
+    "static/media/slide2.png": "/static/media/slide2.56d0207f.png",
+    "static/media/slide3.png": "/static/media/slide3.8e2e90a8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b3f7267f.js",
+    "static/css/2.0624914a.chunk.css",
+    "static/js/2.6996d967.chunk.js",
+    "static/css/main.21832b02.chunk.css",
+    "static/js/main.7daf127d.chunk.js"
+  ]
+}
