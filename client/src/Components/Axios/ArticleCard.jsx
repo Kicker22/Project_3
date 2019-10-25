@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { Component } from "react";
 import BlogCard from "../Blog/blog.jsx";
-import "../../styleSheets/axios.css"
-
+import "../../styleSheets/axios.css";
+import { Link } from "react-router-dom";
 
 export class ArticleCard extends Component {
   state = {
@@ -23,9 +23,10 @@ export class ArticleCard extends Component {
 
   render() {
     return (
-      <div className='d-flex axiosCard'>
+      <div className="d-flex axiosCard">
         {this.state.blogs.map(blog => (
           <BlogCard
+            data={blog}
             key={blog._id}
             image={blog.image}
             title={blog.title}
@@ -33,7 +34,16 @@ export class ArticleCard extends Component {
             summary={blog.summary}
             body={blog.body}
             date={blog.date}
-          />
+          >
+            {/* <Link
+              to={{
+                pathname: "/read",
+                data:[blog]
+              }}
+            >
+              <button className="mb-3">Read Article</button>
+            </Link> */}
+          </BlogCard>
         ))}
       </div>
     );

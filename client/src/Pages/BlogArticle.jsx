@@ -6,6 +6,8 @@ import '../styleSheets/blogArticle.css'
 
 export class BlogArticle extends Component {
   render() {
+    // const {data} = this.props.location
+    // console.log(data)
     return (
       <div className='bg-target'>
         <TopNav/>
@@ -15,7 +17,7 @@ export class BlogArticle extends Component {
           <Jumbotron fluid className=' jumbo-info mb-0'>
             <Container className="text-center">
                 {/* title will take the title from the database */}
-              <h1 className="article-title">Title</h1>
+              <h1 className="article-title">{}</h1>
               {/* author will take the author from the db */}
               <h4 className="article-author">author</h4>
               <hr className="my-4 jumbo-sep" />
