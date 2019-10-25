@@ -101,9 +101,9 @@ export default class index extends Component {
         </Container>
 
         <Container className="mb-4">
-        <Link to="/create">
-        <button href="#" type="submit" id="testButton" className="btn btn-primary btn-lg w-25 btn-block mx-auto my-4">Create Blog Post</button>
-        </Link>
+        {/* <Link to="/create"> */}
+        <button onClick={() => window.location.href="/create"} type="submit" id="testButton" className="btn btn-primary btn-lg btn-block mx-auto my-4">Create Blog Post</button>
+        {/* </Link> */}
               <ArticleCard/>
         </Container>
       </div>
