@@ -13,7 +13,7 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/questionBuilder.html"));
     });
     app.get("/meetups", function (req, res) {
-        res.sendFile(path.join(__dirname, "../../client/public/index.html"));
+        res.sendFile(path.join(__dirname, "../../client/src/index.js"));
     });
     app.post("/create", function (req, res) {
         const newBlog = new Blog({
