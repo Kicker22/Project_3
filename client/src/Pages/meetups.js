@@ -1,70 +1,9 @@
-// <<<<<<< mattHome
-// // import React, { Component } from "react";
-// // import { Nav, Jumbotron, Row, Container, Image, Col } from "react-bootstrap";
-// // import Card from "../Components/Card/card";
-// // import SearchResults from "../Components/SearchResults/SearchResults";
-// // import SearchForm from "../Components/SearchForm/SearchForm";
-// // import API from "../Utils/API";
-// // import Meetup from "../Images/meetup.png";
 
-// // // import Slide2 from "../Images/slide2.png";
-// // // import Slide3 from "../Images/slide3.png";
-// // import TopNavbar from "../Components/Navbar/TopNavbar";
-
-// // export default class meetups extends Component {
-// //   state = {
-// //     result: [],
-// //     search: ""
-// //   };
-// =======
-// // import React, { Component } from "react";
-// // import {
-// //   Nav,
-// //   Jumbotron,
-// //   Card,
-// //   Row,
-// //   Container,
-// //   Image
-// // } from "react-bootstrap";
-// // import Topics from "../Components/Topics/Topics"
-// // import Meetup from "../Images/meetup.png";
-// // // import Slide2 from "../Images/slide2.png";
-// // // import Slide3 from "../Images/slide3.png";
-// // import TopNavbar from "../Components/Navbar/TopNavbar";
-// // export default class meetups extends Component {
-// //   state = {
-// //     result: [],
-// //     search: ""
-// //   };
-// >>>>>>> master
-
-//   // When this component mounts, search for the movie "The Matrix"
-//   componentDidMount() {
-//     this.SearchResults("");
-//   }
-
-//   SearchResults = query => {
-//     API.search(query)
-//       .then(res => this.setState({ result: res.data }))
-//       .catch(err => console.log(err));
-//   };
-
-//   handleInputChange = event => {
-//     const value = event.target.value;
-//     const name = event.target.name;
-//     this.setState({
-//       [name]: value
-//     });
-//   };
-
-//   // When the form is submitted, search the MeetUpsSearch API for the value of `this.state.search`
-//   handleFormSubmit = event => {
-//     event.preventDefault();
-//     this.SearchResults(this.state.search);
-//   };
-
+// <<<<<<< master
 //   render() {
 //     return (
+//       <div>
+//         <TopNavbar/>
 //       <Container className="text-center mt-4">
 //         <br />
 //         <br />
@@ -108,6 +47,9 @@
 //           </Nav.Link>
 //         </Nav.Item>
 //       </Container>
+//       </div>
 //     );
 //   }
 // }
+
+// >>>>>>> master
