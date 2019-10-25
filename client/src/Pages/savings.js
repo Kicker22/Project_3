@@ -6,7 +6,6 @@ import {
   Card,
   Row,
   Container,
-  Carousel
 } from "react-bootstrap";
 import TopNavbar from "../Components/Navbar/TopNavbar"
 export default class savings extends Component {
