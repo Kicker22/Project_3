@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const users = require("./app/routes/User");
 const blogs = require("./app/routes/Blog");
 const questions = require("./app/routes/Question");
-// const apiRoutes = require("./routes/apiRoutes");
+const apiRoutes = require("./routes/apiRoutes");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 
@@ -13,6 +13,7 @@ require("dotenv").config();
 
 // storing express in app var
 const app = express();
+
 
 // middleware
 app.use(express.json());
