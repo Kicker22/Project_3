@@ -4,7 +4,7 @@ const Blog = require("./Blog")
 
 
 module.exports = function (app) {  
-    app.use(express.static("./google"));        
+    const app = express()
         
     app.get("/create", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
