@@ -12,10 +12,14 @@ import {
   FormControl
 } from "react-bootstrap";
 import Questions from "../Images/questions.png";
+import TopNavbar from "../Components/Navbar/TopNavbar";
 export default class meetups extends Component {
   render() {
     return (
       <div>
+        <TopNavbar>
+          
+        </TopNavbar>
         <Container className="text-center mt-4">
           <br />
           <br />
