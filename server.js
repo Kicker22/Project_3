@@ -44,20 +44,14 @@ mongoose
   .then(() => console.log("MongoDB Connected..."))
   .catch(err => console.log(err));
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-//   app.use(express.static("/app/public"));
-// }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.use(express.static("/app/public"));
+}
 
 app.use(express.static(__dirname + "/app/public/"));
 require("./app/routes/htmlRoute")(app);
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('build'));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join('build', 'index.html'));
-  });
-}
 
 app.listen(PORT, () =>
   console.log(`server started on http://locahost: ${PORT}`)
