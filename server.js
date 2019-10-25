@@ -5,6 +5,7 @@ const path = require("path");
 const users = require("./app/routes/User");
 const blogs = require("./app/routes/Blog");
 const questions = require("./app/routes/Question");
+
 const bodyParser = require("body-parser");
 const cors = require('cors');
 
@@ -25,6 +26,7 @@ app.use(users);
 app.use(blogs);
 app.use(questions);
 
+
 // error handling middleware
 app.use(function(err, req, res, next) {
   res.status(422).send({ error: err.message });
@@ -33,8 +35,6 @@ app.use(function(err, req, res, next) {
 // connection port
 const PORT = process.env.PORT || 5000;
 
-// DB Config
-// const db = require('./keys').MongoURI;
 var db = process.env.MONGODB_URI || "mongodb://localhost/PROJECT-3";
 
 // Connect to Mongo
@@ -47,17 +47,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.use(express.static("/app/public"));
 }
-// app.get('*', (request, response) => {
-// 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-// });
-// serving static test files
-// app.use(express.static(__dirname + './client/public'));
+
 app.use(express.static(__dirname + "/app/public/"));
 require("./app/routes/htmlRoute")(app);
-// end of test files
-// app.use("/cors/*", function(req, res) {
-//     req.pipe(request(req.params[0])).pipe(res);
-//   });
+
 
 app.listen(PORT, () =>
   console.log(`server started on http://locahost: ${PORT}`)
