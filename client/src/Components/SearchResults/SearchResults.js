@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card, Container, Button } from "react-bootstrap";
 
 function SearchResults(props) {
   return (
@@ -17,10 +17,9 @@ function SearchResults(props) {
               <h4>Members: {props.member_count}</h4>
             </li>
           </ul>
-          
           <h4>Description:</h4> <p>{props.description}</p>
-
         </div>
+        <Button href={`https://www.meetup.com/find/?allMeetups=false&keywords=${props.name}&radius=Infinity&userFreeform=Salt+Lake+City%2C+UT&mcId=z84101&mcName=Salt+Lake+City%2C+UT&sort=recommended&eventFilter=mysugg`} target="_blank">View Groups</Button>
       </Card>
     </Container>
   );
