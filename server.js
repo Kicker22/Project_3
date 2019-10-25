@@ -5,10 +5,7 @@ const path = require("path");
 const users = require("./app/routes/User");
 const blogs = require("./app/routes/Blog");
 const questions = require("./app/routes/Question");
-// <<<<<<< master
-// =======
-// // const apiRoutes = require("./routes/apiRoutes");
-// >>>>>>> master
+// const apiRoutes = require("./routes/apiRoutes");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 
@@ -28,10 +25,7 @@ app.use(bodyParser.json());
 app.use(users);
 app.use(blogs);
 app.use(questions);
-// <<<<<<< master
-// =======
-// // app.use("/api", apiRoutes);
-// >>>>>>> master
+// app.use("/api", apiRoutes);
 
 // error handling middleware
 app.use(function(err, req, res, next) {
