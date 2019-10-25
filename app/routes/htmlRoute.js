@@ -12,9 +12,9 @@ module.exports = function (app) {
     app.get("/question", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/questionBuilder.html"));
     });
-    app.get("/meetups", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/meetupsBuilder.html"));
-    });
+    // app.get("/meetups", function (req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/meetupsBuilder.html"));
+    // });
     app.post("/create", function (req, res) {
         const newBlog = new Blog({
             image: req.body.image,
