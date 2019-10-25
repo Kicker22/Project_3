@@ -7,7 +7,7 @@ import API from "../Utils/API";
 import Meetup from "../Images/meetup.png";
 import TopNavbar from "../Components/Navbar/TopNavbar";
 
-export default class meetups extends Component {
+export default class Meetups extends Component {
   state = {
     result: [],
     search: ""
