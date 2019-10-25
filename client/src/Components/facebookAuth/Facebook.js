@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
-import { Button, Container } from "react-bootstrap";
-// import { resolve } from "url";
+import { Container } from "react-bootstrap";
 
 export default class Facebook extends Component {
   state = {

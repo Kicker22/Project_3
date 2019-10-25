@@ -1,7 +1,7 @@
 // const axios = require('axios');
 const express = require("express");
 const mongoose = require("mongoose");
-const path = require("path");
+// const path = require("path");
 const users = require("./app/routes/User");
 const blogs = require("./app/routes/Blog");
 const questions = require("./app/routes/Question");

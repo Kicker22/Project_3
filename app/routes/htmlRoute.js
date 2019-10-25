@@ -1,31 +1,11 @@
 const path = require("path")
 const express = require("express")
-const router = express.Router();
 const Blog = require("./Blog")
 
-// THESE ARE TEST ROUTES USED TO SET UP GOOGLE OAUTH
-// THESE ARE TEST ROUTES USED TO SET UP GOOGLE OAUTH
-// THESE ARE TEST ROUTES USED TO SET UP GOOGLE OAUTH
-// THESE ARE TEST ROUTES USED TO SET UP GOOGLE OAUTH
-// THESE ARE TEST ROUTES USED TO SET UP GOOGLE OAUTH
-// THESE ARE TEST ROUTES USED TO SET UP GOOGLE OAUTH
 
-
-
-    // app.get("/login", function (req, res) {
-    //     res.sendFile(path.join(__dirname, "googleTest"));   
-    // });
-
+module.exports = function (app) {  
     app.use(express.static("./google"));        
         
-
-    // If no matching route is found default to home
-    // app.get("/", function (req, res) {
-    //     res.sendFile(path.join(__dirname, "../google/googleTest.html"));
-    // });
-    // app.get("/test", function (req, res) {
-    //     res.sendFile(path.join(__dirname, "../google/testForm.html"));
-    // });
     app.get("/create", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
     });
@@ -61,4 +41,5 @@ const Blog = require("./Blog")
       
     });
 
-module.exports = router;
+}
+

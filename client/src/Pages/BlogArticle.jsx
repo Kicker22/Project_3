@@ -5,10 +5,17 @@ import { Jumbotron, Container } from "react-bootstrap";
 import '../styleSheets/blogArticle.css'
 
 export class BlogArticle extends Component {
+  state = {
+    data:""
+  }
   render() {
-    // const {data} = this.props.location
-    // console.log(data)
+    const {data} = this.props.location
+
+    
+    
+    // this.setState({cardData:data})
     return (
+
       <div className='bg-target'>
         <TopNav/>
             
@@ -17,12 +24,12 @@ export class BlogArticle extends Component {
           <Jumbotron fluid className=' jumbo-info mb-0'>
             <Container className="text-center">
                 {/* title will take the title from the database */}
-              <h1 className="article-title">{}</h1>
+              <h1 className="article-title">{data.title}</h1>
               {/* author will take the author from the db */}
-              <h4 className="article-author">author</h4>
+              <h4 className="article-author">{data.author}</h4>
               <hr className="my-4 jumbo-sep" />
               {/* if we add a synopsis */}
-              <div className="synopsis">Short synopis of the article</div>
+              <div className="synopsis">{data.synopsis}</div>
             </Container>
           </Jumbotron>
         </Container>
@@ -30,7 +37,7 @@ export class BlogArticle extends Component {
         <Container className="mt-0 article-body-container p-3">
             {/* Aticle body will take the article body from the data base */}
           <article className='article-body mt-4 mb-4'>
-           
+           <p>{data.body}</p>
           </article>
         </Container>
         </div>

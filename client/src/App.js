@@ -9,7 +9,7 @@ import User from "./Pages/user";
 import Create from "./Pages/create";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import  BlogArticle  from "./Pages/BlogArticle";
-import Axios, { ArticleCard } from "./Components/Axios/ArticleCard";
+import { ArticleCard } from "./Components/Axios/ArticleCard";
 
 
 function App() {
