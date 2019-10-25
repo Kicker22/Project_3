@@ -1,5 +1,6 @@
 const path = require("path")
 const express = require("express")
+const router = express.Router();
 const Blog = require("./Blog")
 
 // THESE ARE TEST ROUTES USED TO SET UP GOOGLE OAUTH
@@ -15,8 +16,8 @@ const Blog = require("./Blog")
     //     res.sendFile(path.join(__dirname, "googleTest"));   
     // });
 
-           
-    module.exports = function (app) {   
+    app.use(express.static("./google"));        
+        
 
     // If no matching route is found default to home
     app.get("/", function (req, res) {
@@ -60,4 +61,4 @@ const Blog = require("./Blog")
       
     });
 
-    }
+module.exports = router;
