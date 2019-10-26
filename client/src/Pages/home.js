@@ -66,12 +66,12 @@ export default class index extends Component {
                 <Card.Img src={Questions} alt="Card image" />
                 <Card.Footer>
                   <Link to={{
-                    pathname:'/questions'
+                    pathname:'/questionlist'
                   }}>
                   <Button
                     variant="outline-dark"
                   >
-                    VIEW
+                    Ask Question
                   </Button>
                   </Link>
                 </Card.Footer>
@@ -87,7 +87,7 @@ export default class index extends Component {
                   
                   <Button
                     variant="outline-dark">
-                    VIEW
+                    view sales
                   </Button>
                   </Link>
                 </Card.Footer>
@@ -105,7 +105,7 @@ export default class index extends Component {
                     <Button
                       variant="outline-dark"
                     >
-                      View
+                     MeetUps
                     </Button>
                   </Link>
                 </Card.Footer>
