@@ -13,7 +13,6 @@ export class BlogArticle extends Component {
 
     
     
-    // this.setState({cardData:data})
     return (
 
       <div className='bg-target'>
@@ -26,7 +25,8 @@ export class BlogArticle extends Component {
                 {/* title will take the title from the database */}
               <h1 className="article-title">{data.title}</h1>
               {/* author will take the author from the db */}
-              <h4 className="article-author">{data.author}</h4>
+              <h4 className="article-author"> Author: <br/>
+              {data.author}</h4>
               <hr className="my-4 jumbo-sep" />
               {/* if we add a synopsis */}
               <div className="synopsis">{data.synopsis}</div>

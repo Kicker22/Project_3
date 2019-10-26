@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "../styleSheets/home.css";
 import Questions from "../Images/questions.png";
 import Savings from "../Images/savings.png";
@@ -8,7 +8,7 @@ import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
 // import BlogCard from "../Components/Blog/blog";
-import ArticleCard from '../Components/Axios/ArticleCard'
+import ArticleCard from "../Components/Axios/ArticleCard";
 import TopNavbar from "../Components/Navbar/TopNavbar";
 import {
   Button,
@@ -21,16 +21,16 @@ import {
 } from "react-bootstrap";
 
 export default class index extends Component {
-
-  state={
-  }
+  state = {};
 
   render() {
     return (
       <div>
         <TopNavbar/>
-
+        <h1 className="title text-center pt-2">Mommie Blog</h1>
+          <br />
         <Container className="m-auto text-center">
+        <h3 className="">Mommie Blog is a one stop shop for moms to come and converse with other moms. Post your own tips and tricks for everyday life as a mom and ask questions to recieve feedback. You can also post any sales that you might have found at your local grocery store and find meet ups with other moms in your area.  </h3>
           <Nav className="justify-content-center my-4" activeKey="/home">
             <Nav.Item></Nav.Item>
             <Nav.Item>
@@ -39,29 +39,23 @@ export default class index extends Component {
               </Nav.Link> */}
             </Nav.Item>
           </Nav>
-
-          <h1 className="text-center pt-2">Featured Blogs</h1>
-          <br />
           <Carousel>
             <Carousel.Item>
               <img className="d-block w-100" src={Slide1} alt="First slide" />
               <Carousel.Caption className="text-light">
-                <h3>Fun At home</h3>
-                <p>Find Something Fun at Home Here!</p>
+                
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img className="d-block w-100" src={Slide2} alt="Second slide" />
               <Carousel.Caption className="text-dark">
-                <h3>Budgeting</h3>
-                <p>Find ways to save money!</p>
+              
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img className="d-block w-100" src={Slide3} alt="Third slide" />
               <Carousel.Caption className="text-secondary">
-                <h3>Mommy Meetups</h3>
-                <p>Find your get together mommy group!</p>
+            
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
@@ -71,9 +65,15 @@ export default class index extends Component {
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Questions} alt="Card image" />
                 <Card.Footer>
-                  <Button variant="outline-dark" href="/questions">
+                  <Link to={{
+                    pathname:'/questions'
+                  }}>
+                  <Button
+                    variant="outline-dark"
+                  >
                     VIEW
                   </Button>
+                  </Link>
                 </Card.Footer>
               </Card>
             </Col>
@@ -81,9 +81,15 @@ export default class index extends Component {
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Savings} alt="Card image" />
                 <Card.Footer>
-                  <Button variant="outline-dark" href="/savings">
+                  <Link to={{
+                    pathname:'/savings'
+                  }}>
+                  
+                  <Button
+                    variant="outline-dark">
                     VIEW
                   </Button>
+                  </Link>
                 </Card.Footer>
               </Card>
             </Col>
@@ -91,20 +97,36 @@ export default class index extends Component {
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Meetup} alt="Card image" />
                 <Card.Footer>
-                  <Button variant="outline-dark" href="/meetups">
-                    VIEW
-                  </Button>
+                  <Link
+                    to={{
+                      pathname: "/meetups"
+                    }}
+                  >
+                    <Button
+                      variant="outline-dark"
+                    >
+                      View
+                    </Button>
+                  </Link>
                 </Card.Footer>
               </Card>
             </Col>
           </Row>
         </Container>
-
-        <Container className="mb-4">
-        {/* <Link to="/create"> */}
-        <button onClick={() => window.location.href="/create"} type="submit" id="testButton" className="btn btn-primary btn-lg btn-block mx-auto my-4">Create Blog Post</button>
-        {/* </Link> */}
-              <ArticleCard/>
+          <br />
+        <h1 className="title text-center pt-5 pb-4">Featured Posts</h1>
+        <Container className="mb-4 artcile-cards-container">
+          {/* <Link to="/create"> */}
+          <button
+            onClick={() => (window.location.href = "/create")}
+            type="submit"
+            id="testButton"
+            className="btn btn-primary btn-lg btn-block mx-auto my-4"
+          >
+            Create Blog Post
+          </button>
+          {/* </Link> */}
+          <ArticleCard />
         </Container>
       </div>
     );
