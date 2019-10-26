@@ -107,7 +107,14 @@ export default class meetups extends Component {
                       </tbody>
                     </Table>
                   </Card.Title>
-                  <Button variant="primary">Join Group</Button>
+                  <button
+            onClick={() => (window.location.href = "/question")}
+            type="submit"
+            id="testButton"
+            className="btn btn-primary btn-lg btn-block mx-auto my-4"
+          >
+          Ask Question
+          </button>
                 </Card.Body>
               </Card>
             </Row>
