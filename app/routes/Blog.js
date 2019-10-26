@@ -13,8 +13,8 @@ router.get('/blogs', function(req, res, next){
 // add a blog article to the db
 router.post('/home', function(req, res, next){
     Blog.create(req.body).then(function(blog){
-        // res.send("Your post was successfull!"
-        // );
+        res.redirect("/home"
+        );
     }).catch(next);
 });
 
