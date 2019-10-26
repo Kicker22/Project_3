@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "../styleSheets/home.css";
 import Questions from "../Images/questions.png";
 import Savings from "../Images/savings.png";
@@ -8,7 +8,7 @@ import Slide1 from "../Images/slide1.png";
 import Slide2 from "../Images/slide2.png";
 import Slide3 from "../Images/slide3.png";
 // import BlogCard from "../Components/Blog/blog";
-import ArticleCard from '../Components/Axios/ArticleCard'
+import ArticleCard from "../Components/Axios/ArticleCard";
 import TopNavbar from "../Components/Navbar/TopNavbar";
 import {
   Button,
@@ -21,14 +21,12 @@ import {
 } from "react-bootstrap";
 
 export default class index extends Component {
-
-  state={
-  }
+  state = {};
 
   render() {
     return (
       <div>
-        <TopNavbar/>
+        <TopNavbar />
 
         <Container className="m-auto text-center">
           <Nav className="justify-content-center my-4" activeKey="/home">
@@ -71,7 +69,10 @@ export default class index extends Component {
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Questions} alt="Card image" />
                 <Card.Footer>
-                  <Button variant="outline-dark" onClick={() => window.location.href="/questions"}>
+                  <Button
+                    variant="outline-dark"
+                    onClick={() => (window.location.href = "/questions")}
+                  >
                     VIEW
                   </Button>
                 </Card.Footer>
@@ -81,7 +82,10 @@ export default class index extends Component {
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Savings} alt="Card image" />
                 <Card.Footer>
-                  <Button variant="outline-dark" onClick={() => window.location.href="/savings"}>
+                  <Button
+                    variant="outline-dark"
+                    onClick={() => (window.location.href = "/savings")}
+                  >
                     VIEW
                   </Button>
                 </Card.Footer>
@@ -91,7 +95,18 @@ export default class index extends Component {
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Meetup} alt="Card image" />
                 <Card.Footer>
-                <button onClick={() => window.location.href="/meetups"} type="submit" id="testButton" className="btn btn-primary btn-lg btn-block mx-auto my-4">View</button>
+                  <Link to={{
+                    pathname:'meetups'
+                  }}>
+                    <button
+                      onClick={() => (window.location.href = "/meetups")}
+                      type="submit"
+                      id="testButton"
+                      className="btn btn-primary btn-lg btn-block mx-auto my-4"
+                    >
+                      View
+                    </button>
+                  </Link>
                 </Card.Footer>
               </Card>
             </Col>
@@ -99,10 +114,17 @@ export default class index extends Component {
         </Container>
 
         <Container className="mb-4 artcile-cards-container">
-        {/* <Link to="/create"> */}
-        <button onClick={() => window.location.href="/create"} type="submit" id="testButton" className="btn btn-primary btn-lg btn-block mx-auto my-4">Create Blog Post</button>
-        {/* </Link> */}
-              <ArticleCard/>
+          {/* <Link to="/create"> */}
+          <button
+            onClick={() => (window.location.href = "/create")}
+            type="submit"
+            id="testButton"
+            className="btn btn-primary btn-lg btn-block mx-auto my-4"
+          >
+            Create Blog Post
+          </button>
+          {/* </Link> */}
+          <ArticleCard />
         </Container>
       </div>
     );
