@@ -28,7 +28,7 @@ module.exports = function (app) {
         console.log(newBlog)
 
         newBlog.save().then(blog => res.json(blog))
-      
+        res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
     });
 
     app.post("/question", function (req, res) {
