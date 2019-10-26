@@ -7,7 +7,7 @@ import API from "../Utils/API";
 import Meetup from "../Images/meetup.png";
 import TopNavbar from "../Components/Navbar/TopNavbar";
 
-class Meetups extends Component {
+export class Meetups extends Component {
   state = {
     result: [],
     search: ""
@@ -56,6 +56,7 @@ class Meetups extends Component {
               >
                 {this.state.result.map( result => (
                   <SearchResults 
+                    key={result.id}
                     id={result.id}
                     name={result.name}
                     urlkey={result.urlkey}
