@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Container} from "react-bootstrap";
 import "../../styleSheets/card.css";
 import { Link } from "react-router-dom";
 
@@ -9,25 +9,21 @@ function BlogCard(props) {
   };
   return (
     <Card data={props.blog} key={props._id} className="articleCard ">
-      <img
-        src={props.image}
-        alt="card image"
-        className="article-card-img"
-      ></img>
-      <div className="article-card-title container">
-        <h5 className="text-center">{props.title}</h5>
-        <p>Author: {props.author}</p>
-      </div>
-      <Link
-        to={{
-          pathname: "/read",
-          data: props.data
-        }}
-      >
-        <button onClick={buttonClick} className="mb-3">
-          Read Article
-        </button>
-      </Link>
+      <Card.Img className='article-card-img' variant='top' src={props.image} alt='card image'/>
+      <Card.Body>
+        <Card.Title>{props.title}</Card.Title>
+        <Card.Text>Author: {props.author}</Card.Text>
+        <Link
+          to={{
+            pathname: "/read",
+            data: props.data
+          }}
+        >
+          <button onClick={buttonClick} className="mb-3">
+            Read Article
+          </button>
+        </Link>
+      </Card.Body>
     </Card>
   );
 }

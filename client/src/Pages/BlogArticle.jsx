@@ -13,7 +13,6 @@ export class BlogArticle extends Component {
 
     
     
-    // this.setState({cardData:data})
     return (
 
       <div className='bg-target'>
