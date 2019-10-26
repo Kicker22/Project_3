@@ -1,11 +1,11 @@
 // const axios = require('axios');
 const express = require("express");
 const mongoose = require("mongoose");
-const path = require("path");
+// const path = require("path");
 const users = require("./app/routes/User");
 const blogs = require("./app/routes/Blog");
 const questions = require("./app/routes/Question");
-const apiRoutes = require("../Project_3/app/routes/apiRoutes");
+// const apiRoutes = require("./routes/apiRoutes");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 
@@ -13,6 +13,7 @@ require("dotenv").config();
 
 // storing express in app var
 const app = express();
+
 
 // middleware
 app.use(express.json());
@@ -25,7 +26,7 @@ app.use(bodyParser.json());
 app.use(users);
 app.use(blogs);
 app.use(questions);
-app.use("/api", apiRoutes);
+
 
 // error handling middleware
 app.use(function(err, req, res, next) {
@@ -43,14 +44,20 @@ mongoose
   .then(() => console.log("MongoDB Connected..."))
   .catch(err => console.log(err));
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-  app.use(express.static("/app/public"));
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+//   app.use(express.static("/app/public"));
+// }
 
 app.use(express.static(__dirname + "/app/public/"));
 require("./app/routes/htmlRoute")(app);
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('build'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join('build', 'index.html'));
+  });
+}
 
 app.listen(PORT, () =>
   console.log(`server started on http://locahost: ${PORT}`)

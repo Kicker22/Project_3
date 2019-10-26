@@ -1,19 +1,19 @@
 import React, { Component } from "react";
-import { Nav, Jumbotron, Row, Container, Image, Col } from "react-bootstrap";
+import { Nav, Jumbotron, Row, Container, Image, Col, Button } from "react-bootstrap";
 import Card from "../Components/Card/card";
 import SearchResults from "../Components/SearchResults/SearchResults";
 import SearchForm from "../Components/SearchForm/SearchForm";
 import API from "../Utils/API";
 import Meetup from "../Images/meetup.png";
-import TopNavbar from "../Components/Navbar/TopNavbar"
+import TopNavbar from "../Components/Navbar/TopNavbar";
 
-export default class meetups extends Component {
+class Meetups extends Component {
   state = {
     result: [],
     search: ""
   };
 
-  // When this component mounts, search for the movie "The Matrix"
+  // When this component mounts, search for topics
   componentDidMount() {
     this.SearchResults("");
   }
@@ -40,7 +40,8 @@ export default class meetups extends Component {
 
   render() {
     return (
-      
+      <div>
+        <TopNavbar/>
       <Container className="text-center mt-4">
         <TopNavbar></TopNavbar>
         <br />
@@ -52,7 +53,7 @@ export default class meetups extends Component {
           <Row>
             <Col size="md-8">
               <Card
-                heading={this.state.result.id || "Search for a Topic to Join"}
+                heading={this.state.result.id || "Search Topics"}
               >
                 {this.state.result.map( result => (
                   <SearchResults 
@@ -85,6 +86,9 @@ export default class meetups extends Component {
           </Nav.Link>
         </Nav.Item>
       </Container>
+      </div>
     );
   }
 }
+
+export default Meetups

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import "../styleSheets/home.css";
 import Questions from "../Images/questions.png";
 import Savings from "../Images/savings.png";
@@ -22,7 +23,6 @@ import {
 export default class index extends Component {
 
   state={
-
   }
 
   render() {
@@ -101,8 +101,10 @@ export default class index extends Component {
         </Container>
 
         <Container className="mb-4">
-          <h1 className="text-center">Recent Articles</h1>
-              <ArticleCard />
+        {/* <Link to="/create"> */}
+        <button onClick={() => window.location.href="/create"} type="submit" id="testButton" className="btn btn-primary btn-lg btn-block mx-auto my-4">Create Blog Post</button>
+        {/* </Link> */}
+              <ArticleCard/>
         </Container>
       </div>
     );
