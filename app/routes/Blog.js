@@ -11,10 +11,9 @@ router.get('/blogs', function(req, res, next){
 });
 
 // add a blog article to the db
-router.post('/home', function(req, res, next){
+router.post('/blogs', function(req, res, next){
     Blog.create(req.body).then(function(blog){
-        res.redirect("/home"
-        );
+        res.redirect(301, 'https://mommie-blog-test.herokuapp.com')
     }).catch(next);
 });
 

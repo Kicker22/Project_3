@@ -19,7 +19,7 @@ class create extends Component {
                 </div>
             </div>
 
-            <form action="/home" method="post" className="container mb-0">
+            <form action="/blogs" method="post" className="container mb-0">
                 <div className="article-info container parallax">
                     <div className="form-group mt-3">
                         <label for="blogsTest">Image URL</label>
