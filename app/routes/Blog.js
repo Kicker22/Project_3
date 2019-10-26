@@ -14,6 +14,7 @@ router.get('/blogs', function(req, res, next){
 router.post('/blogs', function(req, res, next){
     Blog.create(req.body).then(function(blog){
         res.send(blog);
+        res.redirect("https://mommie-blog.herokuapp.com")
     }).catch(next);
 });
 

@@ -45,7 +45,7 @@ export default class create extends Component {
                     </div>
                 <div className="submit-button container text-center ">
     
-                        <button  onClick={() => window.location.href="/home"} type="submit" id="testButton" className="btn btn-light btn-lg btn-block my-4">Submit</button>
+                        <button  onClick={() => window.open('/home')} type="submit" id="testButton" className="btn btn-light btn-lg btn-block my-4">Submit</button>
 
                 </div>
                 </div>
