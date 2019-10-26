@@ -13,7 +13,7 @@ router.get('/questions', function(req, res, next){
 // add a question to the db
 router.post('/questions', function(req, res, next){
     Question.create(req.body).then(function(question){
-        res.send(question);
+        res.redirect(301, 'https://mommie-blog-test.herokuapp.com/questions')
     }).catch(next);
 });
 
