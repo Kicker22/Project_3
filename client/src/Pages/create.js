@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../styleSheets/create.css";
+import {Link} from 'react-router-dom';
 
 
 
@@ -44,7 +45,9 @@ export default class create extends Component {
                         <textarea className="form-control" id="exampleFormControlTextarea1" name="body" rows="25"></textarea>
                     </div>
                 <div className="submit-button container text-center ">
-                    <button href="/" type="submit" id="testButton" className="btn btn-light btn-lg btn-block my-4">Submit</button>
+                    <Link to={{pathname:'/'}}>
+                        <button  type="submit" id="testButton" className="btn btn-light btn-lg btn-block my-4">Submit</button>
+                    </Link>
                 </div>
                 </div>
             </form>
