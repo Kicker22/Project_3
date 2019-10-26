@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import "../styleSheets/create.css";
 
 
@@ -16,7 +17,7 @@ export default class create extends Component {
                 </div>
             </div>
 
-            <form action="/blogs" method="post" class="container mb-5">
+            <form action="/b" method="post" class="container mb-5">
                 <div className="article-info container parallax">
                     <div className="form-group mt-3">
                         <label for="blogsTest">Image URL</label>
@@ -44,7 +45,9 @@ export default class create extends Component {
                         <textarea className="form-control" id="exampleFormControlTextarea1" name="body" rows="25"></textarea>
                     </div>
                 <div className="submit-button container text-center">
+                <Link to={{pathname:'/'}}>
                     <button href="/" type="submit" id="testButton" className="btn btn-light btn-lg btn-block my-4">Submit</button>
+                </Link>
                 </div>
                 </div>
             </form>
