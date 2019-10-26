@@ -18,6 +18,7 @@ function App() {
     <div>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/home" component={Home} />
         <Route exact path="/meetups" component={Meetups} />
         <Route exact path="/savings" component={Savings} />
         <Route exact path="/questions" component={Questions} />
@@ -25,7 +26,7 @@ function App() {
         <Route exact path="/user" component={User} />
         <Route exact path="/read" component={BlogArticle} />
         <Route exact path="/find" component={ArticleCard} />
-        <Route exact pathe="/create" component={Create} />
+        <Route exact path="/create" component={Create} />
       </Switch>
     </div>
   </Router>
