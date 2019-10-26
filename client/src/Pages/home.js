@@ -96,10 +96,9 @@ export default class index extends Component {
                 <Card.Img src={Meetup} alt="Card image" />
                 <Card.Footer>
                   <Link to={{
-                    pathname:'meetups'
+                    pathname:'/meetups'
                   }}>
                     <button
-                      onClick={() => (window.location.href = "/meetups")}
                       type="submit"
                       id="testButton"
                       className="btn btn-primary btn-lg btn-block mx-auto my-4"
