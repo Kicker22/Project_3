@@ -6,9 +6,9 @@ const Blog = require("./Blog")
 module.exports = function (app) {  
     app.use(express.static("./google"));        
         
-    // app.get("/create", function (req, res) {
-    //     res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
-    // });
+    app.get("/create", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
+    });
     app.get("/question", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/questionBuilder.html"));
     });

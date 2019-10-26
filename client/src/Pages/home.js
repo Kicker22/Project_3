@@ -91,7 +91,7 @@ export default class index extends Component {
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Meetup} alt="Card image" />
                 <Card.Footer>
-                {/* <button onClick={() => window.location.href="/create"} type="submit" id="testButton" className="btn btn-primary btn-lg btn-block mx-auto my-4">View</button> */}
+                <button onClick={() => window.location.href="/meetups"} type="submit" id="testButton" className="btn btn-primary btn-lg btn-block mx-auto my-4">View</button>
                 </Card.Footer>
               </Card>
             </Col>
