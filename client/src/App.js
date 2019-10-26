@@ -9,7 +9,7 @@ import Create from "./Pages/create";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import  BlogArticle  from "./Pages/BlogArticle";
 import { ArticleCard } from "./Components/Axios/ArticleCard";
-import Meetups from "./Pages/meetups";
+import Meetups from "../src/Pages/meetups";
 
 
 function App() {
