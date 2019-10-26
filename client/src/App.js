@@ -9,12 +9,12 @@ import Create from "./Pages/create";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import  BlogArticle  from "./Pages/BlogArticle";
 import { ArticleCard } from "./Components/Axios/ArticleCard";
+import Meetups from "./Pages/meetups";
 
 
 function App() {
   return (
     <Router>
-    <div>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/savings" component={Savings} />
@@ -22,9 +22,9 @@ function App() {
         <Route exact path="/articles" component={Articles} />
         <Route exact path="/read" component={BlogArticle} />
         <Route exact path="/find" component={ArticleCard} />
-        <Route exact pathe="/create" component={Create} />
+        <Route exact path="/create" component={Create} />
+        <Route exact path="/meetups" component={Meetups} />
       </Switch>
-    </div>
   </Router>
   );
 }

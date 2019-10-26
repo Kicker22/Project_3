@@ -6,12 +6,15 @@ const Blog = require("./Blog")
 module.exports = function (app) {  
     app.use(express.static("./google"));        
         
-    app.get("/create", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
-    });
+    // app.get("/create", function (req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
+    // });
     app.get("/question", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/questionBuilder.html"));
     });
+    app.get('/meetups',function(req,res){
+        res.sendFile(path.join(__dirname,'../../'))
+    })
     app.post("/create", function (req, res) {
         const newBlog = new Blog({
             image: req.body.image,
@@ -25,7 +28,6 @@ module.exports = function (app) {
         console.log(newBlog)
 
         newBlog.save().then(blog => res.json(blog))
-        res.sendFile(path.join(__dirname, "../public/articleBuilder.html"));
       
     });
 

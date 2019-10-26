@@ -10,6 +10,8 @@ router.get('/blogs', function(req, res, next){
     })
 });
 
+
+
 // add a blog article to the db
 router.post('/blogs', function(req, res, next){
     Blog.create(req.body).then(function(blog){
