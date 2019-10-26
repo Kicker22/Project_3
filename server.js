@@ -46,7 +46,7 @@ mongoose
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
-  app.get('*', (req, res) => {    res.sendfile(path.join(__dirname = 'client/build/index.html'));  })
+  app.get(express.static("/app/public"));
 }
 
 app.use(express.static(__dirname + "/app/public/"));
