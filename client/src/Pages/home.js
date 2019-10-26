@@ -71,7 +71,7 @@ export default class index extends Component {
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Questions} alt="Card image" />
                 <Card.Footer>
-                  <Button variant="outline-dark" href="/questions">
+                  <Button variant="outline-dark" onClick={() => window.location.href="/questions"}>
                     VIEW
                   </Button>
                 </Card.Footer>
@@ -81,7 +81,7 @@ export default class index extends Component {
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Savings} alt="Card image" />
                 <Card.Footer>
-                  <Button variant="outline-dark" href="/savings">
+                  <Button variant="outline-dark" onClick={() => window.location.href="/savings"}>
                     VIEW
                   </Button>
                 </Card.Footer>
@@ -91,7 +91,7 @@ export default class index extends Component {
               <Card className="bg-transparent 100px100">
                 <Card.Img src={Meetup} alt="Card image" />
                 <Card.Footer>
-                  <Button variant="outline-dark" href="/meetups">
+                  <Button variant="outline-dark" onClick={() => window.location.href="/meetups"}>
                     VIEW
                   </Button>
                 </Card.Footer>

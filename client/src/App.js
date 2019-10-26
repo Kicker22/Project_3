@@ -20,7 +20,6 @@ function App() {
         <Route exact path="/savings" component={Savings} />
         <Route exact path="/questions" component={Questions} />
         <Route exact path="/articles" component={Articles} />
-        <Route exact path="/user" component={User} />
         <Route exact path="/read" component={BlogArticle} />
         <Route exact path="/find" component={ArticleCard} />
         <Route exact pathe="/create" component={Create} />
