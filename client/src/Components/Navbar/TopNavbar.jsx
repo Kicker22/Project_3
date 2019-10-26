@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import "../../styleSheets/home.css";
 import Facebook from "../facebookAuth/Facebook";
+import { Link } from "react-router-dom";
 
-import {
-  Navbar,
-  NavItem,
-} from "react-bootstrap";
+import { Navbar, NavItem } from "react-bootstrap";
 
 export class TopNavbar extends Component {
   render() {
@@ -17,12 +15,25 @@ export class TopNavbar extends Component {
             <a className="mr-4 nav-link" href="/">
               Home
             </a>
-            <a className="mr-4 nav-link" href="/articles">
-              Browse
+            <Link
+              to={{
+                pathname: "/blogs"
+              }}
+              >
+            <a className="mr-4 nav-link" href="/blogs">
+             API
             </a>
-            <a className="mr-4 nav-link" href="/meetups">
-              Meetup
-            </a>
+            </Link>
+
+            <Link
+              to={{
+                pathname: "/meetups"
+              }}
+            >
+              <a className="mr-4 nav-link" href="/meetups">
+                Meetup
+              </a>
+            </Link>
           </NavItem>
         </Navbar>
       </div>
