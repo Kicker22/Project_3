@@ -29,7 +29,8 @@ export default class index extends Component {
     return (
       <div>
         <TopNavbar/>
-
+        <h1 className="title text-center pt-2">Mommie Blog</h1>
+          <br />
         <Container className="m-auto text-center">
           <Nav className="justify-content-center my-4" activeKey="/home">
             <Nav.Item></Nav.Item>
@@ -39,9 +40,6 @@ export default class index extends Component {
               </Nav.Link> */}
             </Nav.Item>
           </Nav>
-
-          <h1 className="text-center pt-2">Featured Blogs</h1>
-          <br />
           <Carousel>
             <Carousel.Item>
               <img className="d-block w-100" src={Slide1} alt="First slide" />
@@ -99,11 +97,13 @@ export default class index extends Component {
             </Col>
           </Row>
         </Container>
-
+          <br />
+        <h1 className="title text-center pt-5 pb-4">Featured Posts</h1>
         <Container className="mb-4 artcile-cards-container">
         {/* <Link to="/create"> */}
-        <button onClick={() => window.location.href="/create"} type="submit" id="testButton" className="btn btn-primary btn-lg btn-block mx-auto my-4">Create Blog Post</button>
+        <button onClick={() => window.location.href="/create"} type="submit" id="testButton" className="btn btn-primary btn-md btn-block mx-auto my-4">Create a Post</button>
         {/* </Link> */}
+        <br />
               <ArticleCard/>
         </Container>
       </div>

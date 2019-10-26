@@ -25,7 +25,7 @@ function App() {
         <Route exact path="/user" component={User} />
         <Route exact path="/read" component={BlogArticle} />
         <Route exact path="/find" component={ArticleCard} />
-        <Route exact pathe="/create" component={Create} />
+        <Route exact path="/create" component={Create} />
       </Switch>
     </div>
   </Router>
