@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "../styleSheets/create.css";
-import {Link} from 'react-router-dom';
 
 
 
 
 
-export default class create extends Component {
+class create extends Component {
+  state={
+      redirect: ""
+  }
     render() {
         return (
             <div className="formBackground pb-5">
@@ -17,7 +19,7 @@ export default class create extends Component {
                 </div>
             </div>
 
-            <form action="/blogs" method="post" class="container mb-0">
+            <form action="/home" method="post" className="container mb-0">
                 <div className="article-info container parallax">
                     <div className="form-group mt-3">
                         <label for="blogsTest">Image URL</label>
@@ -45,9 +47,7 @@ export default class create extends Component {
                         <textarea className="form-control" id="exampleFormControlTextarea1" name="body" rows="25"></textarea>
                     </div>
                 <div className="submit-button container text-center ">
-                    <Link to={{pathname:'/'}}>
                         <button  type="submit" id="testButton" className="btn btn-light btn-lg btn-block my-4">Submit</button>
-                    </Link>
                 </div>
                 </div>
             </form>
@@ -55,3 +55,5 @@ export default class create extends Component {
         );
     }
 }
+
+export default create
