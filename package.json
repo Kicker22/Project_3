@@ -10,8 +10,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "react-scripts build"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "proxy": "http://localhost:3001",
   "repository": {
